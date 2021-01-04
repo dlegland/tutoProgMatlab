@@ -88,6 +88,12 @@
 \usepackage{hyperref}
 
 
+% To add mini-TOC in the beginning of each chapter
+% The 'nohints' option is to prevent a conflict with the lastpage package, 
+% resulting in an extra empty page at the end of the document.
+\usepackage[nohints]{minitoc}
+
+
 % enhance the typesetting of matlab code
 \usepackage{mcode}
 
@@ -203,33 +209,6 @@
 
 \begin_body
 
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-lstset{numbers=left, tabsize=2, frame=single, breaklines=true, basicstyle=
-\backslash
-scriptsize, aboveskip=5pt}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
 \begin_layout Title
 Programmation sous Matlab
 \end_layout
@@ -256,6 +235,22 @@ D.
 \end_layout
 
 \begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+dominitoc
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset CommandInset toc
 LatexCommand tableofcontents
 
@@ -277,7 +272,7 @@ Ce document rassemble différents éléments de pratique de programmation sous
 \end_layout
 
 \begin_layout Standard
-La première partie concerne des généralités sur le langages.
+La première partie concerne des généralités sur le langage.
  Le chapitre 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -724,6 +719,29 @@ http://www.datatool.com/downloads/matlab_style_guidelines.pdf
 , dont ce document est en grande partie inspiré.
  Le chapitre sur la POO redonne quelques conventions/bonnes pratiques spécifique
 s.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+minitoc
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -1429,6 +1447,13 @@ status open
 
 \end_layout
 
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 Modules et bibliothèques
 \end_layout
@@ -1697,6 +1722,29 @@ par valeur
 
 .
  La gestion des objets par référence sera vue au chapitre suivant.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+minitoc
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -2108,6 +2156,29 @@ Ce chapitre présente la gestion des objets introduite depuis la version
  (contrairement aux objets pre-2008).
  On commence par présenter la déclaration des objets, puis des différents
  types de méthodes (les fonctions assoxiées aux objets).
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+minitoc
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -3306,6 +3377,29 @@ Utiliser l'héritage permet de gagner en modularité, et parfois en clarté.
  Ce chapitre présente la gestion de l'héritage de classes sous Matlab, et
  se consacre ensuite à quelques techniques particulières que l'on peut utiliser
  pour l'héritage.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+minitoc
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -5504,7 +5598,52 @@ design patterns
 ) sont des classes ou des ensembles de classes qui permettent de répondre
  efficacement à des questions récurrentes.
  Leur implémentation sous Matlab n'est pas toujours directe, on détaille
- donc ici quelques exemples.
+ donc ici deux exemples: la classe 
+\begin_inset Quotes cld
+\end_inset
+
+Singleton
+\begin_inset Quotes crd
+\end_inset
+
+, qui permet de s'assurer qu'une seule instance d'une classe donnée est
+ créée, et la notion de constructeurs statiques (
+\begin_inset Quotes cld
+\end_inset
+
+
+\emph on
+static factories
+\emph default
+
+\begin_inset Quotes crd
+\end_inset
+
+).
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+minitoc
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -5664,6 +5803,13 @@ inst =
   Methods, Events, Superclasses
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
 \end_inset
 
 
@@ -5896,6 +6042,29 @@ J'essaie de noter ici ce que je considère comme des bonnes pratiques de
  programmation objet sous Matlab.
  Elles ne suivent pas totalement les conventions Matlab, qui ne sont de
  toutes façons pas totalement homogènes.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+minitoc
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -6427,6 +6596,29 @@ Matlab permet de développer des interfaces graphiques relativement conviviales,
  ce qui permet de faciliter la diffusion des outils.
  Par contre le développement est un peu plus techniques qu'avec certains
  autres langages.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+minitoc
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -7526,6 +7718,50 @@ name "chap:Gestion-des-évènements"
 \end_inset
 
 Gestion des évènements
+\end_layout
+
+\begin_layout Standard
+La gestion des évènements permet de faciliter la communication entre les
+ différentes entités d'un même programme.
+ L'idée est qu'à un certain moment de son déroulement, le programme puisse
+ envoyer un signal qui sera intercepté par des objets qui 
+\begin_inset Quotes cld
+\end_inset
+
+écoutent
+\begin_inset Quotes crd
+\end_inset
+
+ les évènements.
+ Les écouteurs vont traiter l'évènement, puis le programme principal reprendra
+ la main.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+minitoc
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Introduction
 \end_layout
 
 \begin_layout Standard
