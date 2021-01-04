@@ -1,0 +1,8344 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass scrreprt
+\begin_preamble
+%\usepackage[utf8]{inputenc}
+%\usepackage{lmodern}
+%\usepackage[T1]{fontenc}
+
+\usepackage[T1]{fontenc}
+%\usepackage{lmodern}
+\usepackage[utf8]{inputenc}
+%\usepackage[utf8x]{inputenc} 
+
+\usepackage{textcomp}  % quelques symboles speciaux
+
+\usepackage{xcolor}
+\definecolor{bl}{rgb}{0.0,0.2,0.6} 
+
+
+% package that modifies style of section headers
+\addtokomafont{part}{\color{bl}\scshape \selectfont}
+\addtokomafont{chapter}{\color{bl}\scshape \selectfont}
+\addtokomafont{section}{\color{bl}\scshape \selectfont}
+\addtokomafont{subsection}{\color{bl}\scshape \selectfont}
+\addtokomafont{subsubsection}{\color{bl}\scshape \selectfont}
+%\allsectionsfont{\color{bl}\scshape \selectfont }
+
+% setup font style for different title elements
+\setkomafont{title}{\color{bl} \bfseries \scshape}
+\setkomafont{author}{\centering \small}
+\setkomafont{date}{\centering \small}
+
+\renewcommand{\contentsname}{Sommaire}
+
+% Change the abstract environment
+\usepackage[runin]{abstract}			% runin option for a run-in title
+\setlength\absleftindent{30pt}		% left margin
+\setlength\absrightindent{30pt}		% right margin
+\abslabeldelim{\quad }						% 
+\setlength{\abstitleskip}{-10pt}
+\renewcommand{\abstractname}{}
+\renewcommand{\abstracttextfont}{\color{bl} \small \slshape }	% slanted text
+
+% Custom headers and footers using KOMA-Script
+\usepackage{scrlayer-scrpage}
+\usepackage{lastpage}	% for page numbering	
+
+% Left header: chapter title on even pages
+\lehead{\slshape\leftmark}
+\lohead{}
+% Center header: empty
+\chead{}
+% Right header: section title on odd pages
+\rehead{}
+\rohead{\slshape\rightmark}
+
+% Outer footer (left of even pages, right of odd pages)
+\KOMAoptions{footsepline=on}
+\ofoot[\footnotesize page \thepage\ / \pageref{LastPage}]{\footnotesize page \thepage\ / \pageref{LastPage}}
+% Center footer: empty
+\cfoot{}
+% Inner footer (right of even pages, left of odd pages)
+\ifoot[\footnotesize \jobname]{\footnotesize \jobname}
+
+% left chapter no number, nothing on the right
+\renewcommand{\chaptermark}[1]{\markboth{\thechapter\ #1}{}}
+% right section with number
+\renewcommand{\sectionmark}[1]{\markright{\thesection\ #1}}
+
+% Added by lyx2lyx
+\usepackage[charter]{mathdesign}
+
+
+%%%%% Packages
+
+\usepackage{algorithm}
+\floatname{algorithm}{Alg.}
+\usepackage{algorithmic}
+
+\usepackage{textcomp}
+
+\usepackage{listings}
+%\usepackage{color}
+\usepackage{hyperref}
+
+
+% enhance the typesetting of matlab code
+\usepackage{mcode}
+
+
+%%%%% ALGORITHMES %%%%% 
+
+\renewcommand{\algorithmicrequire}{\textbf{Requiert:}}
+\renewcommand{\algorithmicensure}{\textbf{Assure:}}
+\renewcommand{\algorithmicend}{\textbf{fin}}
+\renewcommand{\algorithmicif}{\textbf{si}}
+\renewcommand{\algorithmicthen}{\textbf{alors}}
+\renewcommand{\algorithmicelse}{\textbf{sinon}}
+\renewcommand{\algorithmicendif}{\textbf{fin si}}
+
+\renewcommand{\algorithmicfor}{\textbf{pour}}
+\renewcommand{\algorithmicendfor}{\textbf{fin pour}}
+\renewcommand{\algorithmicforall}{\textbf{pour chaque}}
+\renewcommand{\algorithmicwhile}{\textbf{tant que}}
+\renewcommand{\algorithmicdo}{\textbf{faire}}
+\renewcommand{\algorithmicendwhile}{\textbf{fin tant que}}
+\renewcommand{\algorithmicrepeat}{\textbf{r{\'{e}}p{\'{e}}ter}}
+\renewcommand{\algorithmicuntil}{\textbf{tant que}}
+
+% some info for populating document title page
+\author{D. Legland}
+\date{\today}
+\end_preamble
+\options usenames,dvipsnames
+\use_default_options false
+\maintain_unincluded_children false
+\language french
+\language_package default
+\inputencoding utf8
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format pdf2
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement h
+\paperfontsize default
+\spacing single
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder false
+\pdf_colorlinks false
+\pdf_backref false
+\pdf_pdfusetitle true
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 3.5cm
+\topmargin 4.5cm
+\rightmargin 3.5cm
+\bottommargin 3.5cm
+\secnumdepth 3
+\tocdepth 1
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style swiss
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 2
+\paperpagestyle default
+\listings_params "numbers=left,tabsize=2,frame=single,breaklines=true,aboveskip=5pt"
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstset{numbers=left, tabsize=2, frame=single, breaklines=true, basicstyle=
+\backslash
+scriptsize, aboveskip=5pt}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Title
+Programmation sous Matlab
+\end_layout
+
+\begin_layout Date
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+today
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Author
+D.
+ Legland
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
+Introduction
+\end_layout
+
+\begin_layout Standard
+Ce document rassemble différents éléments de pratique de programmation sous
+ Matlab.
+ Au fur et a mesure de la rédaction, il apparait qu'il pourrait servir de
+ tutoriel sur la progammation Matlab, en particulier sur la programmation
+ orientée objets (POO).
+\end_layout
+
+\begin_layout Standard
+La première partie concerne des généralités sur le langages.
+ Le chapitre 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "chap:Conventions-de-programmation"
+
+\end_inset
+
+ pose les conventions que j'utilise.
+ La deuxième partie reprend mes notes sur les structures de données et la
+ programmation orientée objets (chapitres 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "chap:Structures-de-données"
+
+\end_inset
+
+, 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "chap:Programmation-orientée-objets"
+
+\end_inset
+
+ et 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "chap:Héritage-de-classe"
+
+\end_inset
+
+).
+ La troisième partie aborde des thèmes plus techniques, qui reposent le
+ plus souvent sur la manipulation et / ou la création de classes : la conception
+ d'interfaces graphiques (chapitre 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "chap:Interfaces-graphiques"
+
+\end_inset
+
+), la gestion des exceptions et des erreurs (chapitre 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "chap:Exceptions-et-erreurs"
+
+\end_inset
+
+), et enfin une proposition d'architecture pour manipuler les évènements
+ Matlab de manière similaire à Java (chapitre 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "chap:Gestion-des-évènements"
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Part
+Programmer avec Matlab
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+trucs à rajouter 
+\end_layout
+
+\begin_layout Itemize
+base du langage (types de données, opérations de base...)
+\end_layout
+
+\begin_layout Itemize
+notions d'héritage de classe
+\end_layout
+
+\begin_layout Itemize
+ajouter un chapitre sur les collections ? -> comparaison tableaux numérique,
+ tableaux de cellules, containers.Map
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
+Syntaxe de base 
+\end_layout
+
+\begin_layout Standard
+Ce chapitre rappelle très brièvement quelques éléments fondamentaux de la
+ programmation sous Matlab : les types de données, et les structures de
+ contrôle (tests, boucles...).
+\end_layout
+
+\begin_layout Section
+Types de données
+\end_layout
+
+\begin_layout Standard
+Les données manipulées peuvent être :
+\end_layout
+
+\begin_layout Itemize
+des nombres en virgule flottante, 
+\end_layout
+
+\begin_layout Itemize
+des nombres complexes (du type 
+\begin_inset Formula $a+ib$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Itemize
+des nombres entiers (signés ou non)
+\end_layout
+
+\begin_layout Itemize
+des chaînes de caractères
+\end_layout
+
+\begin_layout Itemize
+des tableaux (de valeurs ou de cellules)
+\end_layout
+
+\begin_layout Section
+Tests
+\end_layout
+
+\begin_layout Subsection
+Tests if-then-else
+\end_layout
+
+\begin_layout Standard
+On découpe le programme en plusieurs blocs, et on execute un bloc ou l'autre
+ en fonction d'une condition.
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+if a > b
+\end_layout
+
+\begin_layout Plain Layout
+
+    res = a;
+\end_layout
+
+\begin_layout Plain Layout
+
+else
+\end_layout
+
+\begin_layout Plain Layout
+
+    res = b;
+\end_layout
+
+\begin_layout Plain Layout
+
+end
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+switch
+\end_layout
+
+\begin_layout Standard
+Permet de gérer plusieurs tests en même temps.
+ Très pratique avec les chaînes de caractères.
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+switch option
+\end_layout
+
+\begin_layout Plain Layout
+
+    case 'vrai'
+\end_layout
+
+\begin_layout Plain Layout
+
+        disp('OK');
+\end_layout
+
+\begin_layout Plain Layout
+
+    case 'faux'
+\end_layout
+
+\begin_layout Plain Layout
+
+        disp('Pas bon');
+\end_layout
+
+\begin_layout Plain Layout
+
+    default
+\end_layout
+
+\begin_layout Plain Layout
+
+        error(['Valeur inconnue pour option: ' option]);
+\end_layout
+
+\begin_layout Plain Layout
+
+end
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Boucles
+\end_layout
+
+\begin_layout Subsection
+Boucles for
+\end_layout
+
+\begin_layout Standard
+Outre la boucle 
+\begin_inset Quotes cld
+\end_inset
+
+for
+\begin_inset Quotes crd
+\end_inset
+
+ classique, on peut utiliser d'autres syntaxes.
+\end_layout
+
+\begin_layout Subsubsection
+Boucle for classique
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+for i = 1:5
+\end_layout
+
+\begin_layout Plain Layout
+
+    disp(2*i);
+\end_layout
+
+\begin_layout Plain Layout
+
+end
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Itération sur des tableaux
+\end_layout
+
+\begin_layout Standard
+Il est possible d'utiliser les tableaux à la manière des collections en
+ Java.
+ Exemple :
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+tab = 1:5;
+\end_layout
+
+\begin_layout Plain Layout
+
+for i = tab
+\end_layout
+
+\begin_layout Plain Layout
+
+    disp(i);
+\end_layout
+
+\begin_layout Plain Layout
+
+end
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Note : on itère en fait sur les colonnes (c'est à dire sur la dimension
+ 2).
+ Le reste du tableau est simplifié.
+ On peut aussi itérer sur un tableau de cellules :
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+inds = cellstr(num2str((1:5)', 'ind%d'))';
+\end_layout
+
+\begin_layout Plain Layout
+
+for i = inds
+\end_layout
+
+\begin_layout Plain Layout
+
+    disp(i{1});
+\end_layout
+
+\begin_layout Plain Layout
+
+end
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Là aussi on itère sur les colonnes du tableau, d'où la deuxième transposition
+ du tableau 
+\begin_inset Quotes cld
+\end_inset
+
+inds
+\begin_inset Quotes crd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+Boucle for parallèle
+\end_layout
+
+\begin_layout Standard
+Il s'agit de la même syntaxe que la boucle for, mais cette version permet
+ de paralléliser les calculs faits dans la boucle.
+ Ne doit pas être utilisé si les calculs dépendent d'une itération précédente...
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+parfor i = 1:5
+\end_layout
+
+\begin_layout Plain Layout
+
+    res(i) = maFonction(i);
+\end_layout
+
+\begin_layout Plain Layout
+
+end
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
+\begin_inset CommandInset label
+LatexCommand label
+name "chap:Conventions-de-programmation"
+
+\end_inset
+
+Conventions de programmation
+\end_layout
+
+\begin_layout Standard
+Résumé de quelques conventions de codage préconisées pour le langage Matlab.
+ On peut aussi consulter le document de Richard Johnson
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+http://www.datatool.com/downloads/matlab_style_guidelines.pdf
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+, dont ce document est en grande partie inspiré.
+ Le chapitre sur la POO redonne quelques conventions/bonnes pratiques spécifique
+s.
+\end_layout
+
+\begin_layout Section
+Nommage
+\end_layout
+
+\begin_layout Standard
+De manière générale, on évite les caractères spéciaux dans les noms, et
+ on se limite aux caractères alphabétiques.
+ Il est préférable d'employer des noms anglais.
+ Cela permet (1) d'homogénéiser la langue du code et (2) d'éviter les problèmes
+ dus aux accents...
+ On évite les numéros sauf pour des fichiers temporaires ou de données.
+ 
+\end_layout
+
+\begin_layout Standard
+Le seul caratère spécial toléré (à part les caractères spéciaux imposés
+ par Matlab, tels 
+\begin_inset Quotes cld
+\end_inset
+
+@
+\begin_inset Quotes crd
+\end_inset
+
+ ou 
+\begin_inset Quotes cld
+\end_inset
+
++
+\begin_inset Quotes crd
+\end_inset
+
+) est le caractère souligné 
+\begin_inset Quotes cld
+\end_inset
+
+_
+\begin_inset Quotes crd
+\end_inset
+
+.
+ Il est à utiliser pour nommer les constantes statiques.
+\end_layout
+
+\begin_layout Standard
+Attention au caractère 
+\begin_inset Quotes cld
+\end_inset
+
+-
+\begin_inset Quotes crd
+\end_inset
+
+, qui est interprété par Matlab comme une soustraction...
+\end_layout
+
+\begin_layout Subsection
+Noms de fichiers
+\end_layout
+
+\begin_layout Standard
+Les fichiers Matlab peuvent contenir des scripts, des fonctions ou des classes.
+ Ils ont tous l'extension 
+\begin_inset Quotes cld
+\end_inset
+
+.m
+\begin_inset Quotes crd
+\end_inset
+
+.
+ Il n'y a pas de limite sur le nombre de caractères.
+ 
+\end_layout
+
+\begin_layout Standard
+De manière générale, il est préférable d'écrire les noms de fichier en minuscule.
+ Pour les noms composés, on utilise la syntaxe qui consiste à coller les
+ noms et à mettre en majuscule la première lettre de chaque mot.
+ Exemple : nomDeLaFonction.
+ Exception : les noms de classe, qui commencent par une majuscule.
+\end_layout
+
+\begin_layout Subsection
+Noms des fonctions
+\end_layout
+
+\begin_layout Standard
+La convention Matlab est de stocker les fonction dans des fichiers qui portent
+ leur nom.
+ On applique donc aux fonctions les mêmes conventions que pour les noms
+ de fichier.
+\end_layout
+
+\begin_layout Standard
+Dans la mesure du possible, on utilise des noms de fonction qui commencent
+ par des verbes.
+ Cela permet de différencier les variables (noms) et les fonctions (verbes).
+ Exemple :
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+distance = computeDistance(...)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+On peut utiliser des préfixes pour des groupes de fonctions qui travaillent
+ sur des types communs.
+ Par exemple, des fonctions qui travaillent sur des données 
+\begin_inset Quotes cld
+\end_inset
+
+polygones
+\begin_inset Quotes crd
+\end_inset
+
+ peuvent avoir les noms : polygonArea, polygonCentroid...
+ Autre exemple : un préfixe 
+\begin_inset Quotes cld
+\end_inset
+
+im
+\begin_inset Quotes crd
+\end_inset
+
+ pour les fonctions travaillant sur des images (conventions utilisée par
+ la boîte à outils 
+\begin_inset Quotes cld
+\end_inset
+
+Image Processing
+\begin_inset Quotes crd
+\end_inset
+
+ de Mathworks).
+\end_layout
+
+\begin_layout Subsection
+Noms des classes
+\end_layout
+
+\begin_layout Standard
+Matlab permet la programmation orientée objet.
+ Afin de différencier les classes et les fonction, j'utilise comme convention
+ de nommer les classes en commençant par une majuscule.
+ Les variables membres et les méthodes suivent la convention générale de
+ nommage (
+\begin_inset Quotes cld
+\end_inset
+
+nomDeMembre
+\begin_inset Quotes crd
+\end_inset
+
+, 
+\begin_inset Quotes cld
+\end_inset
+
+nomDeMethode
+\begin_inset Quotes crd
+\end_inset
+
+...).
+\end_layout
+
+\begin_layout Section
+Codage
+\end_layout
+
+\begin_layout Subsection
+Commentaires
+\end_layout
+
+\begin_layout Standard
+Penser à mettre des commentaires dans les codes...
+ Matlab est un langage concis, il est donc très facile d'écrire des lignes
+ courtes mais obscures.
+ L'idée est de résumer l'intention.
+ Une proportion de 30 à 50% de commentaire semble correcte.
+\end_layout
+
+\begin_layout Standard
+On préfèrera les commentaires sur une ligne, commençant par le caractère
+ 
+\begin_inset Quotes cld
+\end_inset
+
+%
+\begin_inset Quotes crd
+\end_inset
+
+, suivi d'une espace, et du commentaire commençant par une majuscule.
+ Exemple :
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+% Exemple de commentaire
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Ponctuation
+\end_layout
+
+\begin_layout Standard
+On termine les instructions par un point-virgule, sans mettre d'espace avant.
+ Cela permet (1) d'avoir une syntaxe similaire à d'autres langages comme
+ C ou Java, et (2) de ne pas afficher les résultats intermédiaires.
+\end_layout
+
+\begin_layout Standard
+On évite les point-virgule à la fin des instructions 
+\begin_inset Quotes cld
+\end_inset
+
+end
+\begin_inset Quotes crd
+\end_inset
+
+, cela surcharge la lecture.
+ On en met à la fin des mots-clés 
+\begin_inset Quotes cld
+\end_inset
+
+return
+\begin_inset Quotes crd
+\end_inset
+
+, 
+\begin_inset Quotes cld
+\end_inset
+
+continue
+\begin_inset Quotes crd
+\end_inset
+
+, qui sont considérées comme des instructions à part entières.
+ 
+\end_layout
+
+\begin_layout Subsection
+Aérer le code
+\end_layout
+
+\begin_layout Standard
+L'écriture du code doit être relativement aérée.
+ Quelques principes généraux :
+\end_layout
+
+\begin_layout Itemize
+une instruction par ligne si possible 
+\end_layout
+
+\begin_layout Itemize
+une espace avant et après le signe d'affectation "=" 
+\end_layout
+
+\begin_layout Itemize
+on évite les parenthèses autant que possible (notamment pour les tests et
+ les boucles)
+\end_layout
+
+\begin_layout Itemize
+on essaie de faire tenir les lignes dans la limite de 80 caractères.
+ L'éditeur de Matlab permet d'afficher la limite, et de passer à la ligne
+ automatiquement.
+\end_layout
+
+\begin_layout Itemize
+on préconise souvent de mettre des espaces autour des opérateurs mathématiques,
+ à voir selon les cas...
+\end_layout
+
+\begin_layout Subsection
+Structuration du code
+\end_layout
+
+\begin_layout Standard
+On essaie de faire des 
+\begin_inset Quotes cld
+\end_inset
+
+blocs fonctionnels
+\begin_inset Quotes crd
+\end_inset
+
+, composés de quelques lignes, qui s'occupent d'une tâche donnée, et que
+ l'on commente.
+\end_layout
+
+\begin_layout Standard
+Les structures de contrôle (boucles, tests...) sont indentées avec quatre caractère
+s espace.
+ On évite les tabulations, qui apparaissent différemment selon les éditeurs.
+ L'idéal est de les remplacer par quatre caractères espace.
+ On évite d'écrire les boucles ou les tests sur une seule ligne.
+ 
+\end_layout
+
+\begin_layout Standard
+Exemple :
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+% Initialisation des données
+\end_layout
+
+\begin_layout Plain Layout
+
+data = zeros(1, N);
+\end_layout
+
+\begin_layout Plain Layout
+
+for i = 1:N
+\end_layout
+
+\begin_layout Plain Layout
+
+    value = getInitValue(i);
+\end_layout
+
+\begin_layout Plain Layout
+
+    data(i) = initData(value);
+\end_layout
+
+\begin_layout Plain Layout
+
+end
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Ecrire du code court
+\end_layout
+
+\begin_layout Standard
+On évite les encapsulations d'indentation.
+ Un niveau de 3 ou 4 indentations devrait être un maximum.
+ Sinon, essayer de faire des sous-fonctions.
+\end_layout
+
+\begin_layout Standard
+On évite les boucles ou les tests trop longs en terme de nombre de lignes.
+ 
+\end_layout
+
+\begin_layout Section
+Documentation des fonctions
+\end_layout
+
+\begin_layout Standard
+Les commentaires en début des fichiers de fonctions peuvent être utilisés
+ pour construire automatiquement la documentation.
+ Il est donc préférable de les soigner...
+\end_layout
+
+\begin_layout Standard
+La première ligne du fichier contient la déclaration de la fonction, suivie
+ de l'en-tête, puis du code.
+\end_layout
+
+\begin_layout Subsection
+Ligne d'entête (
+\begin_inset Quotes cld
+\end_inset
+
+h1
+\begin_inset Quotes crd
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Standard
+La première ligne de la documentation contient le nom de la fonction en
+ majuscule, suivi d'une courte description (qui tient sur la ligne).
+ Pour homogénéiser, il est préférable de l'écrire en anglais, en commençant
+ par un verbe à l'infinitif, avec la première lettre en majuscule, et en
+ terminant par un point.
+\end_layout
+
+\begin_layout Standard
+Exemple :
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+function res = demoFunction(x, n)
+\end_layout
+
+\begin_layout Plain Layout
+
+%DEMOFUNCTION Compute a sample function of x and n.
+\end_layout
+
+\begin_layout Plain Layout
+
+...
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Description de la fonction
+\end_layout
+
+\begin_layout Standard
+Le reste de l'entête doit contenir l'explication de la syntaxe d'utilisation
+ de la fonction, avec la description des paramètres.
+ 
+\end_layout
+
+\begin_layout Standard
+Suggestion de syntaxe : écrire le nom des fonctions tel quel, écrire les
+ paramètres en majuscule.
+ L'idée est de favoriser le copier-coller après avoir tapé un 'help'.
+ La description utilise des verbes conjugués.
+\end_layout
+
+\begin_layout Standard
+Exemple :
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+function res = demoFunction(x, n)
+\end_layout
+
+\begin_layout Plain Layout
+
+%DEMOFUNCTION Compute a sample function of x and n.
+\end_layout
+
+\begin_layout Plain Layout
+
+%
+\end_layout
+
+\begin_layout Plain Layout
+
+% RES = demoFunction(X, N)
+\end_layout
+
+\begin_layout Plain Layout
+
+% Computes the N-th power of the number X.
+\end_layout
+
+\begin_layout Plain Layout
+
+%
+\end_layout
+
+\begin_layout Plain Layout
+
+% RES = demoFunction(X, N, METHOD)
+\end_layout
+
+\begin_layout Plain Layout
+
+% Specifies the method to use.
+ METHOD can be one of:
+\end_layout
+
+\begin_layout Plain Layout
+
+% 'normal': use the normal method
+\end_layout
+
+\begin_layout Plain Layout
+
+% 'optimized': use the optimized method
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Un en-tête de fonction peut aussi contenir un section d'exemples, et une
+ section 
+\begin_inset Quotes cld
+\end_inset
+
+See also
+\begin_inset Quotes crd
+\end_inset
+
+, qui fait référence à des fonctions voisines.
+ Les sections couramment utilisées dans l'aide de Matlab sont :
+\end_layout
+
+\begin_layout Itemize
+Syntax
+\end_layout
+
+\begin_layout Itemize
+Description
+\end_layout
+
+\begin_layout Itemize
+Examples
+\end_layout
+
+\begin_layout Itemize
+See also
+\end_layout
+
+\begin_layout Itemize
+Algorithm
+\end_layout
+
+\begin_layout Itemize
+References
+\end_layout
+
+\begin_layout Standard
+Il est possible d'inclure des liens hypertexte dans l'aide, et de faire
+ exécuter du code Matlab quand on clique dessus.
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+disp('<a href="matlab:magic(4)">Generate magic square</a>')
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Liens entre fonctions
+\end_layout
+
+\begin_layout Standard
+Les noms de fonctions renseignées après la balise 
+\begin_inset Quotes cld
+\end_inset
+
+See also
+\begin_inset Quotes crd
+\end_inset
+
+ génèrent automatiquement des liens hypertexte.
+ C'est assez pratique pour naviguer entre des fonctions apparentées.
+ Si un fichier 
+\begin_inset Quotes cld
+\end_inset
+
+Contents.m
+\begin_inset Quotes crd
+\end_inset
+
+ existe (voir ci-dessous), on peut aussi donner le nom du module, ce qui
+ permet créer une ébauche de navigation.
+\end_layout
+
+\begin_layout Standard
+Il est aussi possible d'inclure explicitement des liens hypertexte vers
+ d'autres fonctions.
+ Exemple :
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+% See the help for the <matlab:doc('publish') publish> function.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Cartouche
+\end_layout
+
+\begin_layout Standard
+La fin de l'en-tête devrait contenir le nom de l'auteur, la date de création,
+ et une mention de copyright.
+ Un outil comme 
+\begin_inset Quotes cld
+\end_inset
+
+tedit
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+http://www.mathworks.com/matlabcentral/fileexchange/8532-tedit
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Quotes crd
+\end_inset
+
+ permet d'ajouter automatiquement un cartouche pré-défini à tout nouveau
+ fichier.
+ Exemple de cartouche :
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+% ------
+\end_layout
+
+\begin_layout Plain Layout
+
+% Author: Name and given name
+\end_layout
+
+\begin_layout Plain Layout
+
+% e-mail: my.name@inra.fr
+\end_layout
+
+\begin_layout Plain Layout
+
+% Created: 2011-04-01,    using Matlab 7.9.0.529 (R2009b)
+\end_layout
+
+\begin_layout Plain Layout
+
+% Copyright 2011 INRA - My Laboratory
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Modules et bibliothèques
+\end_layout
+
+\begin_layout Standard
+On peut regrouper des fonctions voisines dans des répertoires, et créer
+ un paquetage ou module.
+ Il suffit que le répertoire en question soit accessible via le path.
+\end_layout
+
+\begin_layout Standard
+Si le répertoire du module est accessible depuis Matlab, un help avec le
+ nom du module permet d'afficher la première ligne des en-tête des fonctions
+ du module.
+ 
+\end_layout
+
+\begin_layout Subsection
+Fichier Contents.m
+\end_layout
+
+\begin_layout Standard
+On peut aussi créer un fichier 
+\begin_inset Quotes cld
+\end_inset
+
+Contents.m
+\begin_inset Quotes crd
+\end_inset
+
+, qui est affiché si on appelle l'aide de Matlab sur le module.
+ L'idée d'un tel fichier est de présenter un sommaire des fonctions du répertoir
+e.
+ Chaque fonction apparaît ainsi avec la première ligne de son en-tête.
+\end_layout
+
+\begin_layout Standard
+Le fichier Contents peut être généré automatiquement par Matlab, via un
+ 
+\begin_inset Quotes cld
+\end_inset
+
+content report
+\begin_inset Quotes crd
+\end_inset
+
+.
+ Il contient basiquement la liste des fonctions accompagnées de leur description
+ courte.
+ Il peut être retravaillé, pour grouper les fonctions similaires, et pour
+ donner une description générale du module.
+\end_layout
+
+\begin_layout Standard
+Quelques précautions à prendre :
+\end_layout
+
+\begin_layout Itemize
+Le système d'aide de Matlab utilise le fichier 
+\begin_inset Quotes cld
+\end_inset
+
+Contents.m
+\begin_inset Quotes crd
+\end_inset
+
+, mais ne trouve pas le fichier 
+\begin_inset Quotes cld
+\end_inset
+
+contents.m
+\begin_inset Quotes crd
+\end_inset
+
+...
+\end_layout
+
+\begin_layout Itemize
+Matlab n'aime pas les liste à puces commençant par des tirets (
+\begin_inset Quotes cld
+\end_inset
+
+-
+\begin_inset Quotes crd
+\end_inset
+
+), il lui arrive de les faire disparaître (confusion avec les résumés de
+ fonction ?).
+ Recommandation : utiliser des astérisque (
+\begin_inset Quotes cld
+\end_inset
+
+*
+\begin_inset Quotes crd
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Subsection
+Infos de version
+\end_layout
+
+\begin_layout Standard
+Les deux premières lignes du fichier Contents.m sont analysées par Matlab
+ pour fournir des informations de version (par la commande 
+\begin_inset Quotes cld
+\end_inset
+
+ver
+\begin_inset Quotes crd
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+% Toolbox description
+\end_layout
+
+\begin_layout Plain Layout
+
+% Version xxx dd-mmm-yyyy .
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+La convention de Matlab est de donner uniquement la description de la bibliothèq
+ue.
+ Je préfère ajouter le nom, ça permet de la retrouver a posteriori.
+ Il faut aussi avoir un point à la fin de la deuxième ligne pour que la
+ date soit prise en compte (2009b).
+\end_layout
+
+\begin_layout Subsection
+Numérotation des versions
+\end_layout
+
+\begin_layout Standard
+Une première possibilité est de numéroter par majeur.mineur.correctif.
+ Une alternative est d'utiliser systématiquement la date de release (format
+ yyyy-mm-dd).
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Compatibilité
+\end_layout
+
+\begin_layout Standard
+Quelques points pour faciliter le passage entre différents systèmes d'exploitati
+on :
+\end_layout
+
+\begin_layout Itemize
+La gestion des noms de fichiers devrait se baser sur les fonction 
+\begin_inset Quotes cld
+\end_inset
+
+fullfile
+\begin_inset Quotes crd
+\end_inset
+
+ et fileparts
+\begin_inset Quotes crd
+\end_inset
+
+, qui se chargent de gérer les séparateurs de fichier
+\end_layout
+
+\begin_layout Itemize
+L'utilisation des '...' à la fin d'une ligne pourrait causer des problèmes
+ de compatibilité pour les passages de Linux à Windows (à vérifier).
+\end_layout
+
+\begin_layout Part
+Programmation orientée objets
+\end_layout
+
+\begin_layout Standard
+Pour regrouper ses fonctions utilitaires, une pratique courante dans certains
+ langages de programmation est d'utiliser la programmation orientée objets
+ (POO).
+ On crée des objets ayant certains attributs, et on les modifie ou on fait
+ des calculs avec en appelant leurs méthodes, qui sont des fonctions spécifiques
+ à l'objet.
+\end_layout
+
+\begin_layout Standard
+Matlab offre plusieurs mécanismes pour manipuler des objets.
+ Les plus simples sont les structures, mais elles ne permettent pas de créer
+ de méthodes spécifiques.
+ Depuis la version 2006 (?), Matlab propose une gestion simplifiée des objets,
+ qui permet de créer ses propres types de données, mais qui reste assez
+ limitée.
+ Enfin, depuis 2008, la gestion des objets dans un sens plus classique a
+ été introduite, qui permet plus de possibilités et de rigueur, au prix
+ d'un léger apprentissage.
+\end_layout
+
+\begin_layout Standard
+Un premier chapitre présente les structures de données, ainsi que les objets
+ par valeurs, qui corerspondent à l'ancienne version des objets.
+ Un deuxième chapitre présente la création et l'utilisation des objets par
+ référence (
+\begin_inset Quotes cld
+\end_inset
+
+handle-based
+\begin_inset Quotes crd
+\end_inset
+
+) .
+ Le chapitre suivant présente l'héritage de classe, qui permet de construire
+ des objets en réutilisant une partie du code.
+ On termine ensuite avec quelques bonnes pratiques de programmation objet.
+\end_layout
+
+\begin_layout Chapter
+\begin_inset CommandInset label
+LatexCommand label
+name "chap:Structures-de-données"
+
+\end_inset
+
+Structures de données et classes 
+\begin_inset Quotes cld
+\end_inset
+
+par valeur
+\begin_inset Quotes crd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Il existe plusieurs manière d'aborder la programmation orientée objets sous
+ Matlab.
+ Les structures de données permettent d'encapsuler et d'org des données
+ hétérogènes.
+ Il est ensuite possible de leur associer des fonctions, ce qui donne les
+ objets dit 
+\begin_inset Quotes cld
+\end_inset
+
+par valeur
+\begin_inset Quotes crd
+\end_inset
+
+.
+ La gestion des objets par référence sera vue au chapitre suivant.
+\end_layout
+
+\begin_layout Section
+Structures de données
+\end_layout
+
+\begin_layout Standard
+Les structures permettent d'agglomérer des données hétérogènes (nombres,
+ tableaux, chaînes, autres structures...), et sont à la base du concept de
+ classe.
+\end_layout
+
+\begin_layout Subsection
+Déclaration et utilisation
+\end_layout
+
+\begin_layout Standard
+La déclaration d'une structure est plutôt simple :
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+personne.nom = 'Dupont';
+\end_layout
+
+\begin_layout Plain Layout
+
+personne.prenom = 'Thierry';
+\end_layout
+
+\begin_layout Plain Layout
+
+personne.age = 23;
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+On peut aussi assigner ou récupérer les champs de manière détournée, en
+ plaçant le nom du champ dans une variable :
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+champ = 'nom';
+\end_layout
+
+\begin_layout Plain Layout
+
+nom = getfield(personne, champ);
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Il s'agit d'une méthode simple pour passer des arguments à une fonction.
+\end_layout
+
+\begin_layout Standard
+Il est aussi possible d'utiliser la syntaxe suivante :
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+nom = personne.('nom');
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Tableaux de structures
+\end_layout
+
+\begin_layout Standard
+On peut aussi accéder aux éléments d'une structure dans un tableau :
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+nom3 = personnes(3).nom;
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Dans le cas d'un tableau de structures, on peut aussi récupérer l'ensemble
+ des valeurs pour un champ donné, en utilisant une des syntaxes suivantes
+ :
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+noms = {personnes.nom};
+\end_layout
+
+\begin_layout Plain Layout
+
+ages = [personnes.age];
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Un inconvénient est que l'on perd le dimensionnement du tableau de départ
+ : on obtient en sortie un vecteur colonne.
+ Dans les cas où c'est nécessaire, on peut redimensionner avec l'instruction
+ reshape :
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+ages = reshape([personnes.age], size(personnes));
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Fonctions utiles
+\end_layout
+
+\begin_layout Standard
+Matlab fournit quelques fonctions pratiques pour manipuler les structures
+ :
+\end_layout
+
+\begin_layout Description
+fieldnames(S) liste les champs de la structure
+\end_layout
+
+\begin_layout Description
+isfield(S,
+\begin_inset space ~
+\end_inset
+
+NAME) pour tester si le champs NAME existe (NAME est une chaîne de caractères)
+\end_layout
+
+\begin_layout Section
+Objets 
+\begin_inset Quotes cld
+\end_inset
+
+par valeur
+\begin_inset Quotes crd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Première version des classes sous Matlab.
+ Elles sont appelées 'value object' dans la doc Matlab.
+ On manipule à tout instant une copie des objets.
+ Les conséquences directes sont (1) une occupation mémoire plus grande et
+ (2) la nécessité de renvoyer un objet modifié dès que l'on veut changer
+ son état.
+\end_layout
+
+\begin_layout Subsection
+Déclaration
+\end_layout
+
+\begin_layout Standard
+On commence par créer un répertoire '@MaClass', qui contient toutes les
+ fonctions qui s'appliqueront à ce type d'objets.
+ 
+\end_layout
+
+\begin_layout Standard
+On définit ensuite un constructeur, dont la tâche principale est d'affecter
+ un nom de classe à l'objet.
+ Ce constructeur a le même nom que le répertoire dans lequel il est placé,
+ sans l'arobase.
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+function obj = MaClass(data)
+\end_layout
+
+\begin_layout Plain Layout
+
+%MACLASS cree un objet de type MaClass
+\end_layout
+
+\begin_layout Plain Layout
+
+obj.data = data;
+\end_layout
+
+\begin_layout Plain Layout
+
+obj = class(obj, 'MaClass');
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Un objet se crée ensuite par un appel à la fonction 'MaClasse'
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+> obj = MaClass('maDonnee');
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Manipulation
+\end_layout
+
+\begin_layout Standard
+Pour agir sur l'objet, on ajoute des fonctions dans le répertoire de la
+ classe.
+ Si la fonction est appelée, c'est qu'au moins un des arguments est un objet
+ de la classe considérée.
+ On peut ainsi récupérer les valeurs des champs de l'objets, et renvoyer
+ ou afficher un résultat.
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+function showData(obj)
+\end_layout
+
+\begin_layout Plain Layout
+
+%SHOWDATA affiche les donnees de l'objet
+\end_layout
+
+\begin_layout Plain Layout
+
+disp('Donnees de l objet :');
+\end_layout
+
+\begin_layout Plain Layout
+
+disp(obj.data);
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Modification
+\end_layout
+
+\begin_layout Standard
+Pour modifier un objet, il faut en créer un nouveau et le renvoyer :
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+function obj = modifier(obj, newData)
+\end_layout
+
+\begin_layout Plain Layout
+
+%MACLASS cree un objet de type MaClass
+\end_layout
+
+\begin_layout Plain Layout
+
+obj.data = newData;
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+On modifie un objet de la façon suivante :
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+> obj = modifier(obj, 'Nouvelle Donnee');
+\end_layout
+
+\begin_layout Plain Layout
+
+> showData(obj)
+\end_layout
+
+\begin_layout Plain Layout
+
+	  Donnees de l'objet :
+\end_layout
+
+\begin_layout Plain Layout
+
+	  Nouvelle Donnee
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+L'inconvénient de cette approche est que pour des objets volumineux (un
+ polygone, une image, un maillage...), la totalité de l'objet est passée en
+ argument, ce qui conduit à une utilisation mémoire intensive.
+ 
+\end_layout
+
+\begin_layout Chapter
+Programmation orientée objets
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset label
+LatexCommand label
+name "chap:Programmation-orientée-objets"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Ce chapitre présente la gestion des objets introduite depuis la version
+ 2008b.
+ Cette version permet notamment de gérer des objets par référence, c'est
+ à dire qui peuvent être modifiés et qui gardent trace de leur modification
+ (contrairement aux objets pre-2008).
+ On commence par présenter la déclaration des objets, puis des différents
+ types de méthodes (les fonctions assoxiées aux objets).
+\end_layout
+
+\begin_layout Section
+Déclaration de classe
+\end_layout
+
+\begin_layout Standard
+Les classes peuvent être définies soit entièrement dans un fichier, soit
+ dans un répertoire propre.
+ Dans le cas d'un répertoire, le nom du répertoire commence par un arobase
+ (caractère '@'), et le reste correspond au nom de la classe.
+\end_layout
+
+\begin_layout Subsection
+Déclaration
+\end_layout
+
+\begin_layout Standard
+Pour chaque classe, on créé au minimum un fichier 'NomDeLaClasse.m'.
+ Ce fichier contient la déclaration des champs, des constructeurs, et éventuelle
+ment d'autres méthodes.
+ La définition d'une classe se fait dans un bloc 
+\begin_inset Quotes cld
+\end_inset
+
+classdef
+\begin_inset Quotes crd
+\end_inset
+
+, qui comprend tout le fichier :
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+classdef NomDeLaClasse < NomClasseParente
+\end_layout
+
+\begin_layout Plain Layout
+
+...
+ % déclaration de la classe
+\end_layout
+
+\begin_layout Plain Layout
+
+end
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Le signe 
+\begin_inset Quotes cld
+\end_inset
+
+<
+\begin_inset Quotes crd
+\end_inset
+
+ sert à indiquer la ou les classes parentes (voir le chapitre 
+\begin_inset CommandInset ref
+LatexCommand nameref
+reference "chap:Héritage-de-classe"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
+ Pour manipuler des objets par référence, il faut que la classe hérite de
+ la classe 
+\begin_inset Quotes cld
+\end_inset
+
+handle
+\begin_inset Quotes crd
+\end_inset
+
+, ou d'une classe qui elle-même hérite de handle.
+\end_layout
+
+\begin_layout Subsection
+Déclaration des variables membre
+\end_layout
+
+\begin_layout Standard
+Dans la suite du fichier, on déclare les variables locales contenues dans
+ chaque objet.
+ On peut spécifier des valeurs par défaut.
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+...
+\end_layout
+
+\begin_layout Plain Layout
+
+% Déclare les champs à la suite
+\end_layout
+
+\begin_layout Plain Layout
+
+properties
+\end_layout
+
+\begin_layout Plain Layout
+
+	x = 0;
+\end_layout
+
+\begin_layout Plain Layout
+
+	y = 0;
+\end_layout
+
+\begin_layout Plain Layout
+
+end % fin decl champs
+\end_layout
+
+\begin_layout Plain Layout
+
+...
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Déclaration des méthodes
+\end_layout
+
+\begin_layout Standard
+Une méthode se déclare dans le corps de la déclaration de la classe.
+ On commence en général par le ou les constructeurs, qui créent une nouvelle
+ instance de la classe à partir des arguments passés en paramètre.
+\end_layout
+
+\begin_layout Standard
+Exemple de déclaration complète :
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+classdef Point2D < handle
+\end_layout
+
+\begin_layout Plain Layout
+
+...
+\end_layout
+
+\begin_layout Plain Layout
+
+% Déclare les differentes methodes
+\end_layout
+
+\begin_layout Plain Layout
+
+methods
+\end_layout
+
+\begin_layout Plain Layout
+
+  % Déclare le constructeur.
+\end_layout
+
+\begin_layout Plain Layout
+
+  function obj = Point2D(x, y)
+\end_layout
+
+\begin_layout Plain Layout
+
+    obj.x = 0;
+\end_layout
+
+\begin_layout Plain Layout
+
+    obj.y = 0;
+\end_layout
+
+\begin_layout Plain Layout
+
+  end % fin decl.
+ constructeur
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+  % declare une methode de la classe
+\end_layout
+
+\begin_layout Plain Layout
+
+  % (ajouter les corodonnees de deux points)
+\end_layout
+
+\begin_layout Plain Layout
+
+  function res = addCoords(obj)
+\end_layout
+
+\begin_layout Plain Layout
+
+    res = obj.x + obj.y;
+\end_layout
+
+\begin_layout Plain Layout
+
+  end % fin decl.
+ de la methode 'addCoords';
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+  % declare une autre methode
+\end_layout
+
+\begin_layout Plain Layout
+
+  % (calcul de la distance entre deux points)
+\end_layout
+
+\begin_layout Plain Layout
+
+  function dist = distance(obj1, obj2)
+\end_layout
+
+\begin_layout Plain Layout
+
+    dist = hypot(obj1.x-obj2.x, obj1.y-obj2.y);
+\end_layout
+
+\begin_layout Plain Layout
+
+  end
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+end % fin decl methodes
+\end_layout
+
+\begin_layout Plain Layout
+
+end % fin decl classe
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Il est aussi possible d'écrire chaque méthode dans un fichier séparé.
+ Cela montre mieux quelles sont les méthodes implémentées ou surchargées,
+ et évite d'avoir un fichier de classe trop gros.
+ 
+\end_layout
+
+\begin_layout Subsection
+Déclaration du constructeur
+\end_layout
+
+\begin_layout Standard
+Il faut toujours prévoir un constructeur vide : dans le cas où on déclare
+ un tableau d'objets, le constructeur vide est appelé automatiquement.
+\end_layout
+
+\begin_layout Standard
+De plus, il est préférable d'avoir systématiquement un constructeur de copie,
+ qui équivaut à cloner les variables membres.
+\end_layout
+
+\begin_layout Standard
+Exemple de constructeur pour une classe simple :
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+classdef Point2D < handle 
+\end_layout
+
+\begin_layout Plain Layout
+
+% Demo class for a 2-dimensional point.
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+properties
+\end_layout
+
+\begin_layout Plain Layout
+
+    % x-coordinate of the point
+\end_layout
+
+\begin_layout Plain Layout
+
+    x = 0;
+\end_layout
+
+\begin_layout Plain Layout
+
+    % y-coordinate of the point
+\end_layout
+
+\begin_layout Plain Layout
+
+    y = 0;
+\end_layout
+
+\begin_layout Plain Layout
+
+end
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+methods
+\end_layout
+
+\begin_layout Plain Layout
+
+    function obj = Point2D(varargin)
+\end_layout
+
+\begin_layout Plain Layout
+
+        % Constructor.
+\end_layout
+
+\begin_layout Plain Layout
+
+        
+\end_layout
+
+\begin_layout Plain Layout
+
+        % empty constructor, to allow construction of arrays
+\end_layout
+
+\begin_layout Plain Layout
+
+        if nargin == 0
+\end_layout
+
+\begin_layout Plain Layout
+
+            return;
+\end_layout
+
+\begin_layout Plain Layout
+
+        end
+\end_layout
+
+\begin_layout Plain Layout
+
+        
+\end_layout
+
+\begin_layout Plain Layout
+
+        % copy constructor, to allow 'p2 = Point2D(p1);'
+\end_layout
+
+\begin_layout Plain Layout
+
+        if isa(varargin{1}, 'Point2D')
+\end_layout
+
+\begin_layout Plain Layout
+
+            var1 = varargin{1};
+\end_layout
+
+\begin_layout Plain Layout
+
+            obj.x = var1.x;
+\end_layout
+
+\begin_layout Plain Layout
+
+            obj.y = var1.y;
+\end_layout
+
+\begin_layout Plain Layout
+
+            return;
+\end_layout
+
+\begin_layout Plain Layout
+
+        end
+\end_layout
+
+\begin_layout Plain Layout
+
+        
+\end_layout
+
+\begin_layout Plain Layout
+
+        % initialisation constructor
+\end_layout
+
+\begin_layout Plain Layout
+
+        if nargin == 2
+\end_layout
+
+\begin_layout Plain Layout
+
+            obj.x = varargin{1};
+\end_layout
+
+\begin_layout Plain Layout
+
+            obj.y = varargin{2};
+\end_layout
+
+\begin_layout Plain Layout
+
+            return;
+\end_layout
+
+\begin_layout Plain Layout
+
+        end
+\end_layout
+
+\begin_layout Plain Layout
+
+    end
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+end % end of methods declaration
+\end_layout
+
+\begin_layout Plain Layout
+
+end % end of class declaration
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Pour des hiérarchies de classes plus complexes, il est aussi possible d'envisage
+r l'utilisation de constructeurs statiques (section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Constructeurs-Statiques"
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand vpageref
+reference "sec:Constructeurs-Statiques"
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Section
+Création et utilisation des objets
+\end_layout
+
+\begin_layout Standard
+Pour construire un objet (c'est à dire instancier une classe), on passe
+ par un appel au constructeur :
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+> p1 = Point2D(2, 3);
+\end_layout
+
+\begin_layout Plain Layout
+
+> p2 = Point2D(5, 7);
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Pour appeler une méthode, plusieurs syntaxes sont possibles :
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+> res1 = p1.addCoords;
+\end_layout
+
+\begin_layout Plain Layout
+
+> res2 = p1.addCoords();
+\end_layout
+
+\begin_layout Plain Layout
+
+> res3 = addCoords(p1);
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+La deuxième syntaxe est préférable.
+ La première introduit une confusion entre les noms de champs et de méthode,
+ tandis que la troisième risque d'introduire des conflits de noms.
+ (Au niveau technique, les deux premières ajoutent aussi un appel à la fonction
+ subsref, à voir comment cela se traduit au niveau des performances).
+\end_layout
+
+\begin_layout Standard
+Pour appeler des méthodes sur plusieurs objets :
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+> d12 = p1.distance(p2)
+\end_layout
+
+\begin_layout Plain Layout
+
+  d12 = 
+\end_layout
+
+\begin_layout Plain Layout
+
+      5 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Ici, la méthode est appelée sur l'objet 
+\begin_inset Quotes cld
+\end_inset
+
+p1
+\begin_inset Quotes crd
+\end_inset
+
+, avec comme deuxième argument l'objet 
+\begin_inset Quotes cld
+\end_inset
+
+p2
+\begin_inset Quotes crd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Méthodes privées
+\end_layout
+
+\begin_layout Standard
+Les méthodes privées ne sont accessibles que depuis les méthodes de la classe.
+ Elle permettent de partager du code entre les différentes méthodes, sans
+ que ce code ne soit rendu public.
+ Cela concerne typiquement du code d'initialisation, ou du code de vérification
+ de l'intégrité des données de la classe.
+\end_layout
+
+\begin_layout Subsection
+Méthodes privées dans la déclaration de classe
+\end_layout
+
+\begin_layout Standard
+Si toutes les méthodes sont déclarées dans un même fichier, les fonctions
+ privées doivent être déclarées dans un bloc séparé.
+ On crée un bloc de déclarations de méthodes, pour lequel on spécifie l'accès
+ privé 
+\begin_inset Quotes cld
+\end_inset
+
+private
+\begin_inset Quotes crd
+\end_inset
+
+, et on place le code des fonctions privées :
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+classdef ClassName
+\end_layout
+
+\begin_layout Plain Layout
+
+% dans le bloc des méthodes, on écrit le patron de la méthode
+\end_layout
+
+\begin_layout Plain Layout
+
+methods (Access = private)
+\end_layout
+
+\begin_layout Plain Layout
+
+    function res = maFonction(obj, arg1, arg2)
+\end_layout
+
+\begin_layout Plain Layout
+
+		% ...
+ code de la fonction privée
+\end_layout
+
+\begin_layout Plain Layout
+
+    end
+\end_layout
+
+\begin_layout Plain Layout
+
+end
+\end_layout
+
+\begin_layout Plain Layout
+
+end
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Méthodes privées dans un fichier séparé
+\end_layout
+
+\begin_layout Standard
+Si on a déclaré la fonction dans un répertoire spécifique (
+\begin_inset Quotes cld
+\end_inset
+
+@-répertoire
+\begin_inset Quotes crd
+\end_inset
+
+), on peut écrire le code dans un fichier séparé.
+ Il faut quand même déclarer la fonction le bloc de déclaration des méthodes
+ de la classe, afin de pouvoir la rendre privée.
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+classdef ClassName
+\end_layout
+
+\begin_layout Plain Layout
+
+% dans le bloc des méthodes, on écrit le patron de la méthode
+\end_layout
+
+\begin_layout Plain Layout
+
+methods (Access = private)
+\end_layout
+
+\begin_layout Plain Layout
+
+    res = maFonction(obj, arg1, arg2)
+\end_layout
+
+\begin_layout Plain Layout
+
+end
+\end_layout
+
+\begin_layout Plain Layout
+
+end
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+On écrit ensuite le code de la méthode dans un fichier appelé 
+\begin_inset Quotes cld
+\end_inset
+
+maFonction.m
+\begin_inset Quotes crd
+\end_inset
+
+, qui se trouve dans le répertoire de la classe.
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+% fichier "maFonction.m"
+\end_layout
+
+\begin_layout Plain Layout
+
+function res = maFonction(obj, arg1, arg2)
+\end_layout
+
+\begin_layout Plain Layout
+
+   % ici, le code de la fonction privée
+\end_layout
+
+\begin_layout Plain Layout
+
+end
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Méthodes locales
+\end_layout
+
+\begin_layout Standard
+Quand on définit une classe dans un répertoire, on peut créer un répertoire
+ 
+\begin_inset Quotes cld
+\end_inset
+
+private
+\begin_inset Quotes crd
+\end_inset
+
+.
+ Les fonctions présentes dans ce répertoire sont utilisables depuis les
+ méthodes de la classe, mais ne sont pas visible de l'extérieur.
+ Elles se comportent comme des méthodes privées, à la différence que le
+ premier argument ne doit pas être la référence de l'objet.
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\begin_layout Section
+Méthodes statiques
+\end_layout
+
+\begin_layout Standard
+Il est possible de déclarer des méthodes statiques, qui seront partagées
+ par toutes les instances de la classe.
+ Ces méthodes ne peuvent manipuler les données membres de la classe.
+ Leur intérêt est soit de regrouper des fonctions opérant sur des objets
+ d'une classe donnée, soit de définir des constantes ou des méthodes spécifiques
+ à la classe d'objets utilisée.
+\end_layout
+
+\begin_layout Standard
+Les méthodes statiques se déclarent de la même manière que des méthodes
+ classiques, en ajoutant le mot-clé 
+\begin_inset Quotes cld
+\end_inset
+
+Static
+\begin_inset Quotes crd
+\end_inset
+
+ (avec la majuscule).
+ Pour utiliser une méthode statique, on utilise le nom de la classe, suivi
+ du nom de la méthode 
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+res = NomDeClasse.nomDeMethode(...);
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Exemple 1 : calcul de 
+\begin_inset Formula $\pi$
+\end_inset
+
+ avec une précision arbitraire
+\end_layout
+
+\begin_layout Standard
+On commence par définir une classe 
+\begin_inset Quotes cld
+\end_inset
+
+Math
+\begin_inset Quotes crd
+\end_inset
+
+ contenant une méthode 
+\begin_inset Quotes cld
+\end_inset
+
+pi
+\begin_inset Quotes crd
+\end_inset
+
+, qui accepte un argument de tolérance numérique en entrée.
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+classdef Math
+\end_layout
+
+\begin_layout Plain Layout
+
+methods (Static)
+\end_layout
+
+\begin_layout Plain Layout
+
+  % calcule PI avec une precision donnee.
+\end_layout
+
+\begin_layout Plain Layout
+
+  function p = pi(tol)
+\end_layout
+
+\begin_layout Plain Layout
+
+    [n, d] = rat(pi, tol);
+\end_layout
+
+\begin_layout Plain Layout
+
+    p = n/d;
+\end_layout
+
+\begin_layout Plain Layout
+
+  end
+\end_layout
+
+\begin_layout Plain Layout
+
+end
+\end_layout
+
+\begin_layout Plain Layout
+
+end
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+On calcule ensuite selon différentes précisions :
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+pi1 = Math.pi(.1)
+\end_layout
+
+\begin_layout Plain Layout
+
+pi1 =
+\end_layout
+
+\begin_layout Plain Layout
+
+    3.1429
+\end_layout
+
+\begin_layout Plain Layout
+
+pi2 = Math.pi(.001)
+\end_layout
+
+\begin_layout Plain Layout
+
+pi2 =
+\end_layout
+
+\begin_layout Plain Layout
+
+    3.1416
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Exemple 2 : calcul de la distance entre deux points 
+\end_layout
+
+\begin_layout Standard
+Écriture de la classe :
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+classdef Point2D
+\end_layout
+
+\begin_layout Plain Layout
+
+...
+\end_layout
+
+\begin_layout Plain Layout
+
+methods(Static)
+\end_layout
+
+\begin_layout Plain Layout
+
+  % Calcule la distance entre deux points
+\end_layout
+
+\begin_layout Plain Layout
+
+  function d = distancePoints(p1, p2)
+\end_layout
+
+\begin_layout Plain Layout
+
+    % calcule la distance par Pythagore.
+\end_layout
+
+\begin_layout Plain Layout
+
+    d = hypot(p1.x-p2.x, p1.y-p2.y);
+\end_layout
+
+\begin_layout Plain Layout
+
+  end % fin de la methode statique
+\end_layout
+
+\begin_layout Plain Layout
+
+end
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Exemple d'appel :
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+p1 = Point2D(2, 3);
+\end_layout
+
+\begin_layout Plain Layout
+
+p2 = Point2D(5, 7):
+\end_layout
+
+\begin_layout Plain Layout
+
+d = Point2D.distancePoints(p1, p2)
+\end_layout
+
+\begin_layout Plain Layout
+
+d =
+\end_layout
+
+\begin_layout Plain Layout
+
+     5.0
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Limitations
+\end_layout
+
+\begin_layout Standard
+On ne peut pas se passer du nom de la classe pour appeler une classe statique.
+ Cela implique des lignes de code un peu longues, et peut être pénible pour
+ des hiérarchies de classe un peu touffues.
+ 
+\end_layout
+
+\begin_layout Standard
+On peut redéfinir une classe statique dans une classe dérivée, à condition
+ que la classe ne soit pas 
+\begin_inset Quotes cld
+\end_inset
+
+scellée
+\begin_inset Quotes crd
+\end_inset
+
+ (équivalent du mot-clé 
+\begin_inset Quotes cld
+\end_inset
+
+final
+\begin_inset Quotes crd
+\end_inset
+
+ en java, qui se traduit en Matlab par 
+\begin_inset Quotes cld
+\end_inset
+
+Sealed = true
+\begin_inset Quotes crd
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+On ne peut pas avoir de champs de classe statiques.
+ Cela peut être pénible pour certaines classes (typiquement une classe singleton
+).
+ On peut s'en sortir en utilisant des variables persistantes dans le corps
+ d'une méthode statique.
+\end_layout
+
+\begin_layout Section
+Autres méthodes particulières
+\end_layout
+
+\begin_layout Standard
+Certaines méthodes spécifiques sont appelées dans certains cas particuliers
+ : set, loadobj, saveobj...
+ Un 
+\begin_inset Quotes cld
+\end_inset
+
+help handle
+\begin_inset Quotes crd
+\end_inset
+
+ permet de les lister, afin éventuellement de ré-implémenter celles qui
+ le nécessitent.
+\end_layout
+
+\begin_layout Chapter
+Héritage de classe
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset label
+LatexCommand label
+name "chap:Héritage-de-classe"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Utiliser l'héritage permet de gagner en modularité, et parfois en clarté.
+ Ce chapitre présente la gestion de l'héritage de classes sous Matlab, et
+ se consacre ensuite à quelques techniques particulières que l'on peut utiliser
+ pour l'héritage.
+\end_layout
+
+\begin_layout Section
+Créer et utiliser une hiérarchie de classes
+\end_layout
+
+\begin_layout Subsection
+Déclaration de l'héritage
+\end_layout
+
+\begin_layout Standard
+On utilise le signe 
+\begin_inset Quotes cld
+\end_inset
+
+<
+\begin_inset Quotes crd
+\end_inset
+
+, suivi du nom de la classe parente :
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+classdef ClasseFille < ClasseParente
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Si on déclare un objet de la classe ClasseFille, alors elle bénéficiera
+ de toutes les fonctionalités déjà implémentées par la classe parente.
+\end_layout
+
+\begin_layout Standard
+Matlab supporte l'héritage multiple, il faut utiliser le caractère 
+\begin_inset Quotes cld
+\end_inset
+
+&
+\begin_inset Quotes crd
+\end_inset
+
+ : 
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+classdef ClasseFille < ClasseMere & ClassePere
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Par contre, il faut prendre quelques précautions pour la gestion des conflits
+ (par exemple, si les deux classes parentes implémentent une même méthode,
+ laquelle faut-il appeler...).
+\end_layout
+
+\begin_layout Subsection
+Appeler le constructeur parent
+\end_layout
+
+\begin_layout Standard
+Exemple de constructeur appelant le constructeur de la classe parente :
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+methods
+\end_layout
+
+\begin_layout Plain Layout
+
+    function obj = ClasseFille(varargin)
+\end_layout
+
+\begin_layout Plain Layout
+
+        % calls the parent constructor
+\end_layout
+
+\begin_layout Plain Layout
+
+        obj = obj@ClasseMere(varargin{:});
+\end_layout
+
+\begin_layout Plain Layout
+
+    end % constructor
+\end_layout
+
+\begin_layout Plain Layout
+
+end % methods
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Cet exemple est minimaliste, l'idée est de pouvoir rajouter un traitement
+ spécifique des entrées avant ou après l'appel au constructeur.
+ Pour l'héritage multiple, on appelle les constructeurs parents successivement.
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+methods
+\end_layout
+
+\begin_layout Plain Layout
+
+    function this = ClasseFille(varargin)
+\end_layout
+
+\begin_layout Plain Layout
+
+        % calls the parent constructor
+\end_layout
+
+\begin_layout Plain Layout
+
+        obj = obj@ClasseMere(); % sans argument
+\end_layout
+
+\begin_layout Plain Layout
+
+        obj = obj@ClassePere(varargin{1}); % avec argument
+\end_layout
+
+\begin_layout Plain Layout
+
+    end % constructor
+\end_layout
+
+\begin_layout Plain Layout
+
+end % methods
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Pour une classe parente située dans un package, il faut ajouter le nom du
+ package.
+ Ex :
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+obj = obj@lePackage.ClasseMere(varargin{:});
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Il faudrait vérifier si le constructeur vide de la classe parente est appelé
+ par défaut ? A priori oui...
+\end_layout
+
+\begin_layout Subsection
+Appeler la méthode parente
+\end_layout
+
+\begin_layout Standard
+L'appel à une méthode de la classe parente suit la même logique que pour
+ le constructeur :
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+classdef ClasseFille < ClasseMere
+\end_layout
+
+\begin_layout Plain Layout
+
+methods
+\end_layout
+
+\begin_layout Plain Layout
+
+    function uneMethode(obj)
+\end_layout
+
+\begin_layout Plain Layout
+
+        % ...
+ pretraitements
+\end_layout
+
+\begin_layout Plain Layout
+
+        uneMethode@ClasseMere(obj); % Appelle la methode de la classe parente
+\end_layout
+
+\begin_layout Plain Layout
+
+        % ...
+ post-traitements
+\end_layout
+
+\begin_layout Plain Layout
+
+    end 
+\end_layout
+
+\begin_layout Plain Layout
+
+end
+\end_layout
+
+\begin_layout Plain Layout
+
+end
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Afficher les objets
+\end_layout
+
+\begin_layout Standard
+Pour gérer la manière dont les objets peuvent être affichés, on peut surcharger
+ les méthodes disp et display :
+\end_layout
+
+\begin_layout Description
+disp affiche un résumé de l'objet, s'utilise de manière explicite (en tapant
+ 
+\begin_inset Quotes cld
+\end_inset
+
+disp obj
+\begin_inset Quotes crd
+\end_inset
+
+ ou 
+\begin_inset Quotes cld
+\end_inset
+
+disp(obj)
+\begin_inset Quotes crd
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Description
+display fonction d'affichage, qui fait le plus souvent appel à disp, et
+ qui est appelée quand le nom de l'objet termine une ligne de commande non
+ terminée par un point-virgule.
+\end_layout
+
+\begin_layout Description
+char le comportement par défaut de cette méthode est de convertir un objet
+ en un tableau de caractères.
+ Cela peut être utilisé par les fonctions d'affichage.
+\end_layout
+
+\begin_layout Standard
+Si on tape une ligne de commande contenant uniquement le nom d'un objet,
+ on a ainsi une chaîne d'appels : display->disp->char
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Surcharger les opérateurs mathématiques
+\end_layout
+
+\begin_layout Standard
+Quand une classe a pour vocation de représenter des données calculables
+ (par exemple, un vecteur mathématique, un quaternion...), on peut pouvoir
+ utiliser des opérations arithmétiques classiques de manière naturelle.
+ Cela est possible en surchargeant certaines fonctions.
+\end_layout
+
+\begin_layout Standard
+Les fonctions mathématiques classiques (addition, multiplication...) peuvent
+ être surchargées en suivant le tableau 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Opérateurs-Arithmétiques"
+
+\end_inset
+
+.
+ Les fonctions se présentent souvent sous deux formes, l'une opérant sur
+ le tableau global (nom de fonction préfixé par un 
+\begin_inset Quotes cld
+\end_inset
+
+m
+\begin_inset Quotes crd
+\end_inset
+
+), l'autre sur les éléments du tableau (pour les opérateur préfixés par
+ un point).
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="13" columns="3">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+opérateur
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+fonction matlab
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+note
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+a .
+\backslash
+ b 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+ldivide.m
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+a - b
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+minus.m
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+a 
+\backslash
+ b
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+mldivide.m
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+a ^ b
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+mpower.m
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+a / b
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+mrdivide.m
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+a * b
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+mtimes.m
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+a + b
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+plus.m
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+a .^ b
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+power.m
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+a ./ b
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+rdivide.m
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+a .* b
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+times.m
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-a
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+uminus.m
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+opérateur unaire
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
++a 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+uplus.m
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+opérateur unaire
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Opérateurs-Arithmétiques"
+
+\end_inset
+
+Surcharge des opérateurs arithmétiques.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Il est aussi possible de surcharger des fonctions plus complexes, comme
+ le logarithme ou l'exponentielle (voir le tableau 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Fonctions-Mathématiques"
+
+\end_inset
+
+).
+ On peut aussi surcharger les fonctions trigonométriques, qui sont relativement
+ nombreuses...
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="7" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+fonction matlab
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+note
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+sqrt
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+nthroot
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+exp
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+log
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+logarithme naturel
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+log2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+logarithme binaire
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+log10
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+logarithme décimal
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Fonctions-Mathématiques"
+
+\end_inset
+
+Surcharge de quelques fonctions mathématiques classiques.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+La manipulation des tableaux binaires se fait grâce aux fonctions données
+ dans les tableaux 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Opérateurs-Relationnels"
+
+\end_inset
+
+ et 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Opérateurs-Logiques"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="7" columns="3">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+opérateur
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+fonction matlab
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+note
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+a == b
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+eq.m
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+a >= b
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+ge.m
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+a > b
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+gt.m
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+a <= b
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+le.m
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+a < b
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+lt.m
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+a ~= b
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+ne.m
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Opérateurs-Relationnels"
+
+\end_inset
+
+Surcharge des opérateurs de comparaison.
+ Ils fournissent un résultat binaire.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="3">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+opérateur
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+fonction matlab
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+note
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+a & b
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+and.m
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+~a
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+not.m
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+opérateur unaire
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+a | b
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+or.m
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+xor.m
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+pas de symbole
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Opérateurs-Logiques"
+
+\end_inset
+
+Surcharge des opérateurs logiques.
+ Ils travaillent sur des arguments binaires.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Surcharger subsref et subsasgn
+\end_layout
+
+\begin_layout Standard
+Il est possible sous Matlab de modifier et ajuster le comportement des opérateur
+s d'indexation comme les parenthèses et le point.
+ Cela peut améliorer la facilité d'utilisation, mais cela requiert un peu
+ de technicité.
+\end_layout
+
+\begin_layout Standard
+Les quelques méthodes à modifier sont les suivantes :
+\end_layout
+
+\begin_layout Description
+subsref permet de spécifier le retour des appels du type monObjet(3, 3)
+ ou monObjet.truc
+\end_layout
+
+\begin_layout Description
+subsasgn permet de spécifier le retour des appels du type monObjet(3, 3)=2
+ ou monObjet.truc = 'demo'.
+\end_layout
+
+\begin_layout Description
+end permet de changer la manière dont les indices sont calculés dans un
+ tableau (ex : monObjet(:, 4:end))
+\end_layout
+
+\begin_layout Description
+subsindex permet d'utiliser un objet comme un index.
+ Ex : res = obj1(obj2).
+\end_layout
+
+\begin_layout Description
+numel renvoie le nombre d'éléments dans un tableau.
+ 
+\end_layout
+
+\begin_layout Description
+size pour avoir la taille de l'objet ou du tableau d'objets
+\end_layout
+
+\begin_layout Description
+length renvoie la taille selon la plus grande dimension
+\end_layout
+
+\begin_layout Subsection
+Modifier la lecture des données
+\end_layout
+
+\begin_layout Standard
+Quelques idées de ce qu'il serait bien d'avoir pour des tableaux d'objets.
+ On considère une classe 
+\begin_inset Quotes cld
+\end_inset
+
+Point
+\begin_inset Quotes crd
+\end_inset
+
+ avec deux champs x et y, et un tableau de points de 2 lignes et 3 colonnes.
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+obj1 = Point(10, 1);
+\end_layout
+
+\begin_layout Plain Layout
+
+obj2 = Point(20, 1);
+\end_layout
+
+\begin_layout Plain Layout
+
+obj3 = Point(30, 1);
+\end_layout
+
+\begin_layout Plain Layout
+
+obj4 = Point(10, 2);
+\end_layout
+
+\begin_layout Plain Layout
+
+obj5 = Point(20, 2);
+\end_layout
+
+\begin_layout Plain Layout
+
+obj6 = Point(30, 2);
+\end_layout
+
+\begin_layout Plain Layout
+
+array = [obj1 obj2 obj3 ; obj4 obj5 obj6];
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+array(1,
+\begin_inset space ~
+\end_inset
+
+1) renvoie obj1
+\end_layout
+
+\begin_layout Description
+array(2:3,
+\begin_inset space ~
+\end_inset
+
+1:2) renvoie un sous-tableau de même classe
+\end_layout
+
+\begin_layout Description
+obj1.x renvoie 10
+\end_layout
+
+\begin_layout Description
+array(1,
+\begin_inset space ~
+\end_inset
+
+1).x renvoie 10
+\end_layout
+
+\begin_layout Description
+array.x renvoie un tableau [10 20 30;10 20 30]
+\end_layout
+
+\begin_layout Subsection
+Modifier les données
+\end_layout
+
+\begin_layout Standard
+à utiliser :
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+array(2, 3) = p2;              % allocation simple
+\end_layout
+
+\begin_layout Plain Layout
+
+array(2, 3).x = 4;             % allocation de donnees
+\end_layout
+
+\begin_layout Plain Layout
+
+array(23, 12) = p24;           % copie d un point
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+array(2, 3) = p23; '()'
+\end_layout
+
+\begin_layout Plain Layout
+
+array(2, 3).x = 4; '()', '.'
+\end_layout
+
+\begin_layout Plain Layout
+
+array(2:3, 1:2) = p23; '()'
+\end_layout
+
+\begin_layout Plain Layout
+
+array(2:3, 1:2) = pts; '()'
+\end_layout
+
+\begin_layout Plain Layout
+
+array(2:3, 1:2).x = 4; '()', '.'
+\end_layout
+
+\begin_layout Plain Layout
+
+array(2:3, 1:2).x = [1 2;3 4]; '()', '.'
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Utiliser subsindex
+\end_layout
+
+\begin_layout Standard
+Cette méthode permet d'utiliser un objet comme un index.
+ Ex : 
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+res = obj1(obj2);
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+La méthode accepte un seul argument : l'objet servant d'index.
+ Elle renvoie un ensemble d'indices compris entre 0 et numel(obj)-1.
+\end_layout
+
+\begin_layout Section
+Surcharge des opérations de tableau
+\end_layout
+
+\begin_layout Standard
+La plupart de ces fonctions concernent principalement les tableaux définis
+ par deux coordonnées.
+ Les fonctions qui se traduisent par des surcharges d'opérateurs sont listées
+ dans le tableau 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Opérateurs-Tableaux"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Méthodes de concaténation :
+\end_layout
+
+\begin_layout Description
+vertcat concaténation verticale
+\end_layout
+
+\begin_layout Description
+horzcat concaténation horizontale
+\end_layout
+
+\begin_layout Description
+cat concaténation selon une dimension arbitraire
+\end_layout
+
+\begin_layout Description
+repmat réplique un tableau pour faire une mosaïque
+\end_layout
+
+\begin_layout Description
+kron une autre manière de répéter des tableaux
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="6" columns="3">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+opérateur
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+fonction matlab
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+note
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+a'
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+ctranspose.m
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+[a b]
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+horzcat.m
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+a.'
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+transpose.m
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+[a ; b]
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+vertcat.m
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+a:b
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+colon.m
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Opérateurs-Tableaux"
+
+\end_inset
+
+Surcharge des opérateurs manipulant la forme des tableaux des objets
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Si cela a un sens pour les objets manipulés, on a aussi des fonctions permettant
+ de changer la taille des objets
+\end_layout
+
+\begin_layout Description
+permute permute les dimensions du tableau
+\end_layout
+
+\begin_layout Description
+reshape ré-organise les éléments du tableau pour avoir une nouvelle taille
+ de tableau
+\end_layout
+
+\begin_layout Description
+flipdim retourne selon une direction spécifique
+\end_layout
+
+\begin_layout Description
+fliplr retourne de droite à gauche
+\end_layout
+
+\begin_layout Description
+flipud retourne de haut en bas
+\end_layout
+
+\begin_layout Description
+rot90 rotation par 90 degrés
+\end_layout
+
+\begin_layout Description
+transpose retournement par rapport à la diagonale
+\end_layout
+
+\begin_layout Description
+ctranspose le même...
+\end_layout
+
+\begin_layout Description
+sort renvoie une version triée de l'objet
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\begin_layout Section
+Méthodes et classes abstraites
+\end_layout
+
+\begin_layout Subsection
+Méthode abstraite
+\end_layout
+
+\begin_layout Standard
+On peut déclarer des méthodes comme abstraites.
+ Les méthodes ne sont pas implémentées par la classe, mais seront implémentées
+ par les sous-classes.
+ L'intérêt est de manipuler les différentes classes concrètes à travers
+ les méthodes déclarées dans les classes parentes, sans se soucier des détails
+ d'implémentation.
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+classdef Group 
+\end_layout
+
+\begin_layout Plain Layout
+
+% La classe Group déclare deux méthodes 
+\begin_inset Quotes crd
+\end_inset
+
+add
+\begin_inset Quotes crd
+\end_inset
+
+ et 
+\begin_inset Quotes cld
+\end_inset
+
+times
+\begin_inset Quotes crd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+% Une classe héritant de Group devra les implémenter toutes
+\end_layout
+
+\begin_layout Plain Layout
+
+% les deux avant de pouvoir être instanciée
+\end_layout
+
+\begin_layout Plain Layout
+
+methods (Abstract)       
+\end_layout
+
+\begin_layout Plain Layout
+
+  result = add(g1, g2)
+\end_layout
+
+\begin_layout Plain Layout
+
+  result = times(group, k)
+\end_layout
+
+\begin_layout Plain Layout
+
+end 
+\end_layout
+
+\begin_layout Plain Layout
+
+end
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Classe abstraite et interface
+\end_layout
+
+\begin_layout Standard
+Une classe est dite 
+\series bold
+abstraite
+\series default
+ si elle comporte des méthodes abstraites.
+ Une classe abstraite ne peut pas être instanciée (on ne peut pas créer
+ d'objet de cette classe).
+\end_layout
+
+\begin_layout Standard
+Matlab ne permet apparemment pas de déclarer comme abstraite une classe
+ qui ne contient pas de méthode abstraite.
+\end_layout
+
+\begin_layout Standard
+Si une classe ne contient que des classes abstraites, on l'appelle une 
+\series bold
+interface
+\series default
+.
+\end_layout
+
+\begin_layout Subsection
+Méthode scellée
+\end_layout
+
+\begin_layout Standard
+Il est possible de déclarer une méthode comme scellée (
+\shape italic
+\lang english
+sealed
+\shape default
+\lang french
+).
+ Une telle méthode ne pourra pas être redéfinie par une classe dérivée.
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+classdef sealedDemo
+\end_layout
+
+\begin_layout Plain Layout
+
+methods (Sealed)
+\end_layout
+
+\begin_layout Plain Layout
+
+  function res = sealedMethod(obj, value)
+\end_layout
+
+\begin_layout Plain Layout
+
+    res = obj.value + value;
+\end_layout
+
+\begin_layout Plain Layout
+
+  end
+\end_layout
+
+\begin_layout Plain Layout
+
+end 
+\end_layout
+
+\begin_layout Plain Layout
+
+end
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
+Motifs de conception
+\end_layout
+
+\begin_layout Standard
+Les motifs de conception (en anglais 
+\begin_inset Quotes cld
+\end_inset
+
+
+\shape italic
+\lang american
+design patterns
+\shape default
+\lang french
+
+\begin_inset Quotes crd
+\end_inset
+
+) sont des classes ou des ensembles de classes qui permettent de répondre
+ efficacement à des questions récurrentes.
+ Leur implémentation sous Matlab n'est pas toujours directe, on détaille
+ donc ici quelques exemples.
+\end_layout
+
+\begin_layout Section
+Singleton
+\end_layout
+
+\begin_layout Standard
+Le singleton est un motif de conception qui permet de s'assurer qu'une classe
+ donnée ne peut être instanciée qu'une seule fois.
+ Par exemple, un gestionnaire d'application qui compte le nombre de fois
+ où l'application est ouverte.
+\end_layout
+
+\begin_layout Standard
+Dans la plupart des langages, on utilise une variable de classe statique.
+ Or, Matlab ne permet pas ceci...
+ Une solution est de passer par une variable persistante dans l'espace de
+ la fonction qui renvoie l'instance.
+\end_layout
+
+\begin_layout Standard
+Implémentation sous Matlab :
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+classdef (Sealed) SingleInstance < handle
+\end_layout
+
+\begin_layout Plain Layout
+
+   % le constructeur est declare prive, pour eviter son appel direct
+\end_layout
+
+\begin_layout Plain Layout
+
+   methods (Access = private) 
+\end_layout
+
+\begin_layout Plain Layout
+
+      function obj = SingleInstance
+\end_layout
+
+\begin_layout Plain Layout
+
+      end
+\end_layout
+
+\begin_layout Plain Layout
+
+   end 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+   % la classe fournit une methode statique, qui renvoie l'instance courante
+\end_layout
+
+\begin_layout Plain Layout
+
+   methods (Static)
+\end_layout
+
+\begin_layout Plain Layout
+
+      function singleObj = getInstance
+\end_layout
+
+\begin_layout Plain Layout
+
+         % ici, l'astuce consiste a utiliser une variable persistante.
+\end_layout
+
+\begin_layout Plain Layout
+
+         persistent localObj
+\end_layout
+
+\begin_layout Plain Layout
+
+         % on verifie si l'objet a deja ete cree, sinon on le cree
+\end_layout
+
+\begin_layout Plain Layout
+
+         if isempty(localObj) || ~isvalid(localObj)
+\end_layout
+
+\begin_layout Plain Layout
+
+            localObj = SingleInstance;
+\end_layout
+
+\begin_layout Plain Layout
+
+         end
+\end_layout
+
+\begin_layout Plain Layout
+
+         singleObj = localObj;
+\end_layout
+
+\begin_layout Plain Layout
+
+      end
+\end_layout
+
+\begin_layout Plain Layout
+
+   end
+\end_layout
+
+\begin_layout Plain Layout
+
+end
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Exemple d'utilisation :
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+>> inst = SingleInstance.getInstance
+\end_layout
+
+\begin_layout Plain Layout
+
+inst = 
+\end_layout
+
+\begin_layout Plain Layout
+
+  SingleInstance handle with no properties.
+\end_layout
+
+\begin_layout Plain Layout
+
+  Methods, Events, Superclasses
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Constructeurs statiques ('static factory')
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Constructeurs-Statiques"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Les constructeurs statiques offrent une alternative intéressante à l'appel
+ direct des constructeurs.
+ Ils consistent à déclarer dans la classe une ou plusieurs méthodes statiques
+ qui retournent une instance de la classe.
+ 
+\end_layout
+
+\begin_layout Standard
+On leur trouve plusieurs avantages :
+\end_layout
+
+\begin_layout Itemize
+il est possible de donner un nom plus explicite pour la méthode (par exemple,
+ une classe Point peut proposer les méthodes createCartesian ou createPolar,
+ selon l'interprétation que l'on veut faire des arguments)
+\end_layout
+
+\begin_layout Itemize
+on peut renvoyer une instance d'une classe dérivée à la place de la classe
+ appelante.
+ Cela permet de renvoyer un objet bien adapté aux arguments d'entrée, et
+ facilite les évolutions ultérieures des objets.
+\end_layout
+
+\begin_layout Standard
+Un exemple :
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+classdef Point2D < handle
+\end_layout
+
+\begin_layout Plain Layout
+
+...
+\end_layout
+
+\begin_layout Plain Layout
+
+% Declaration des methodes statiques
+\end_layout
+
+\begin_layout Plain Layout
+
+methods (Static)
+\end_layout
+
+\begin_layout Plain Layout
+
+    function p = createCartesian(x, y)
+\end_layout
+
+\begin_layout Plain Layout
+
+        p = Point2D(x, y);
+\end_layout
+
+\begin_layout Plain Layout
+
+    end
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    function p = createPolar(theta, rho)
+\end_layout
+
+\begin_layout Plain Layout
+
+        x = rho * cos(theta);
+\end_layout
+
+\begin_layout Plain Layout
+
+        y = rho * sin(theta);
+\end_layout
+
+\begin_layout Plain Layout
+
+        p = Point2D(x, y);
+\end_layout
+
+\begin_layout Plain Layout
+
+    end
+\end_layout
+
+\begin_layout Plain Layout
+
+end
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+% Declaration des methodes 
+\begin_inset Quotes cld
+\end_inset
+
+normales
+\begin_inset Quotes crd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+methods
+\end_layout
+
+\begin_layout Plain Layout
+
+    % Constructeur
+\end_layout
+
+\begin_layout Plain Layout
+
+    function Point2D(varargin)
+\end_layout
+
+\begin_layout Plain Layout
+
+    ...
+\end_layout
+
+\begin_layout Plain Layout
+
+    end
+\end_layout
+
+\begin_layout Plain Layout
+
+end
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Une utilisation sous Matlab :
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+>> p = Point2D.createPolar(pi/3, 1);
+\end_layout
+
+\begin_layout Plain Layout
+
+>> p.X
+\end_layout
+
+\begin_layout Plain Layout
+
+ans = 
+\end_layout
+
+\begin_layout Plain Layout
+
+     0.5
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En particulier sous Matlab, il est même possible de déclarer des classes
+ totalement abstraites (qui correspondent au concept d'
+\begin_inset Quotes cld
+\end_inset
+
+interface
+\begin_inset Quotes crd
+\end_inset
+
+ en Java), mais qui proposent des fabriques statiques.
+ Les fabriques statiques renvoient (en général) une instance d'une implémentatio
+n particulière de l'interface.
+\end_layout
+
+\begin_layout Chapter
+Bonnes pratiques en programmation orientée objet
+\end_layout
+
+\begin_layout Standard
+J'essaie de noter ici ce que je considère comme des bonnes pratiques de
+ programmation objet sous Matlab.
+ Elles ne suivent pas totalement les conventions Matlab, qui ne sont de
+ toutes façons pas totalement homogènes.
+\end_layout
+
+\begin_layout Section
+Conventions de nommage
+\end_layout
+
+\begin_layout Standard
+J'utilise globalement les conventions de nommage java, qui suivent la convention
+ 
+\begin_inset Quotes cld
+\end_inset
+
+CamelCase
+\begin_inset Quotes crd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+classes la première lettre en majuscule.
+ Exemple : 
+\begin_inset Quotes cld
+\end_inset
+
+NomDeClasse
+\begin_inset Quotes crd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+méthodes la première lettre en minuscule.
+ Exemple : 
+\begin_inset Quotes cld
+\end_inset
+
+nomDeMethode
+\begin_inset Quotes crd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+membres la première lettre en majuscule (ce qui semble préconisé par Matlab),
+ ce qui permet d'éviter les conflits avec les noms de méthodes.
+ Dans le corps des fonctions, je référence systématiquement les champs par
+ 
+\begin_inset Quotes cld
+\end_inset
+
+
+\series bold
+obj
+\series default
+.nomDuChamp
+\begin_inset Quotes crd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Gérer des tableaux d'objets
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+à voir si on garde cette partie ; elle me semble difficile à implémenter
+ en pratique...
+ Peut-être à garder pour expliquer les difficultés ?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Créations d'un tableaux d'objets
+\end_layout
+
+\begin_layout Standard
+Lorsque l'on itère sur plusieurs objets, il peut être préférable de pré-allouer
+ la mémoire afin d'éviter les redimensionnements de tableau.
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+dim = num2cell(size(input));        % recupere la memoire
+\end_layout
+
+\begin_layout Plain Layout
+
+result(dim{:}) = NomDeLaClasse();   % alloue un tableau, appelle le constructeur
+ vide
+\end_layout
+
+\begin_layout Plain Layout
+
+for i = 1:length(input(:))            % boucle pour créer chaque objet
+\end_layout
+
+\begin_layout Plain Layout
+
+    % traitement sur chaque objet
+\end_layout
+
+\begin_layout Plain Layout
+
+    result(i) = NomDeLaClasse(input(i));
+\end_layout
+
+\begin_layout Plain Layout
+
+end
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Le fait de passer par un tableau de cellules pour calculer la taille permet
+ de gérer les cas de tableaux en dimension quelconque.
+ Remarque : il ne faut pas oublier de prévoir un constructeur vide, qui
+ sera appelé automatiquement quand le tableau sera créé.
+\end_layout
+
+\begin_layout Subsection
+Appels de méthodes sur un tableau d'objets
+\end_layout
+
+\begin_layout Standard
+Il est assez agréable d'avoir des fonctions 
+\begin_inset Quotes cld
+\end_inset
+
+vectorisées
+\begin_inset Quotes crd
+\end_inset
+
+, qui calculent le résultat sur tous les éléments d'un tableau sans devoir
+ passer par une boucle.
+ De plus, l'idéal est d'avoir en sortie un tableau de même taille que le
+ tableau d'entrée.
+ 
+\end_layout
+
+\begin_layout Standard
+Par exemple, on souhaite calculer la norme de plusieurs vecteurs stockés
+ dans un tableau appelé 
+\begin_inset Quotes cld
+\end_inset
+
+vectors
+\begin_inset Quotes crd
+\end_inset
+
+.
+ On souhaite en sortie un tableau de double.
+ Le contenu du fichier 
+\begin_inset Quotes cld
+\end_inset
+
+getNorm
+\begin_inset Quotes crd
+\end_inset
+
+, stocké dans le répertoire 
+\begin_inset Quotes cld
+\end_inset
+
+Vector2D
+\begin_inset Quotes crd
+\end_inset
+
+ serait le suivant :
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+function res = getNorm(obj)
+\end_layout
+
+\begin_layout Plain Layout
+
+%GETNORM Renvoie la norme d'un vecteur
+\end_layout
+
+\begin_layout Plain Layout
+
+dim = num2cell(size(obj));     % recupere la memoire du tableau
+\end_layout
+
+\begin_layout Plain Layout
+
+res = zeros(dim{:});			% cree un tableau vide
+\end_layout
+
+\begin_layout Plain Layout
+
+for i = 1:length(obj(:))         % calcule la norme de chaque vecteur
+\end_layout
+
+\begin_layout Plain Layout
+
+    res(i) = hypot(obj(i).x, obj(i).y);
+\end_layout
+
+\begin_layout Plain Layout
+
+end
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Une alternative (ici plus concise) est d'utiliser la fonction 
+\begin_inset Quotes cld
+\end_inset
+
+reshape
+\begin_inset Quotes crd
+\end_inset
+
+ :
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+res = reshape(hypot([obj.x], [obj.y]), size(obj));
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Dans les cas où le résultat de la fonction appelée sur un objet unique est
+ un tableau, on ne peut plus utiliser cette stratégie.
+ Une possibilité est de renvoyer soit le tableau dans le cas où l'entrée
+ est un objet unique, soit un tableau de cellules si l'entrée est un tableau
+ d'objets.
+\end_layout
+
+\begin_layout Section
+Paquetages
+\end_layout
+
+\begin_layout Standard
+Depuis la version 2008a, Matlab permet aussi l'utilisation de modules 
+\begin_inset Quotes cld
+\end_inset
+
+importables
+\begin_inset Quotes crd
+\end_inset
+
+, à la Java par exemple.
+ Le nom du répertoire doit commencer par le caractère 
+\begin_inset Quotes cld
+\end_inset
+
++
+\begin_inset Quotes crd
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
++mypack
+\end_layout
+
+\begin_layout Plain Layout
+
++mypack/pkfonc.m % une fonction de paquetage
+\end_layout
+
+\begin_layout Plain Layout
+
++mypack/@pkClass % une classe dans un paquetage
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+L'utilisation des classes du modules se fait soit via une directive d'importatio
+n, soit en utilisant une syntaxe du type 
+\begin_inset Quotes cld
+\end_inset
+
+nomDuModule.NomDeClasse
+\begin_inset Quotes crd
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Exemple :
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+res = mypack.pkfunc(data)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+est équivalent à :
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+import mypack.*;
+\end_layout
+
+\begin_layout Plain Layout
+
+res = pkfunc(data)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Encapsulation des classes
+\end_layout
+
+\begin_layout Standard
+L'utilisation des paquetages permet de faciliter la manipulation des espaces
+ de nom.
+ On peut aussi placer dans des sous-modules les classes utilitaires, qui
+ ne seront ainsi pas visibles par l'utilisateur sans être explicitement
+ importées.
+\end_layout
+
+\begin_layout Subsubsection
+Exemple 1
+\end_layout
+
+\begin_layout Standard
+Conidérons un package '+truc', qui contient :
+\end_layout
+
+\begin_layout Itemize
+un objet Truc
+\end_layout
+
+\begin_layout Itemize
+une fonction create
+\end_layout
+
+\begin_layout Standard
+La fonction create peut être appelée de la manière suivante :
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+truc.create;
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+et renvoie un objet de classe Truc.
+\end_layout
+
+\begin_layout Subsubsection
+Exemple 2
+\end_layout
+
+\begin_layout Standard
+Autre possibilité est de créer une classe Graph abstraite 
+\begin_inset Quotes cld
+\end_inset
+
+AbstractGraph
+\begin_inset Quotes crd
+\end_inset
+
+, et de placer dans un répertoire utilitaire 'graph.impl' les classes correpsonda
+nt aux implémentations concrètes.
+ Exemple :
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/arborescence_paquetage_graph.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Exemple d'arborescence de paquetage pour une bibliothèque sur les graphes.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+La classe principale Graph importe à façon les classes nécessaires, mais
+ l'utilisateur final n'a pas à se préoccuper du contenu de 'graph.impl',
+ et ne le voit même pas dans le chemin courant.
+\end_layout
+
+\begin_layout Part
+Concepts avancés
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+les collections : rappel sur les tableaux, et description de containers.Map
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
+\begin_inset CommandInset label
+LatexCommand label
+name "chap:Interfaces-graphiques"
+
+\end_inset
+
+Interfaces graphiques
+\end_layout
+
+\begin_layout Standard
+Matlab permet de développer des interfaces graphiques relativement conviviales,
+ ce qui permet de faciliter la diffusion des outils.
+ Par contre le développement est un peu plus techniques qu'avec certains
+ autres langages.
+\end_layout
+
+\begin_layout Section
+Concevoir ses interfaces
+\end_layout
+
+\begin_layout Standard
+On peut développer ses interfaces à la main, c'est-à-dire en positionnant
+ chaque composant individuellement, ou bien s'aider d'outils exterieurs,
+ tels que Guide, ou des gestionnaires de mise en page (layout managers).
+\end_layout
+
+\begin_layout Subsection
+Conception manuelle
+\end_layout
+
+\begin_layout Standard
+Une méthode pour concevoir ses interfaces graphiques est de les programmer
+ soi-même à la main.
+ Long et vite fastidieux, mais on sait ce que l'on fait.
+ 
+\end_layout
+
+\begin_layout Subsection
+Utilitaire 
+\begin_inset Quotes cld
+\end_inset
+
+Guide
+\begin_inset Quotes crd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+L'outil Guide est un environnement de conception d'interfaces utilisateur
+ graphiques.
+ Il permet de générer très rapidement de petites interfaces graphiques.
+ Par contre le code généré devient très vite difficile à maintenir.
+\end_layout
+
+\begin_layout Subsection
+Utilisation de 
+\begin_inset Quotes cld
+\end_inset
+
+layouts
+\begin_inset Quotes crd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Possibilité de gérer des layouts 
+\begin_inset Quotes cld
+\end_inset
+
+à la java
+\begin_inset Quotes crd
+\end_inset
+
+.
+ Le gros avantage est que cela permet de mixer des composants redimensionnables
+ et des composants de taille fixe, ce qui donne un aspect plus fini aux
+ interfaces.
+\end_layout
+
+\begin_layout Section
+Les composants
+\end_layout
+
+\begin_layout Subsection
+Composants de fenêtre
+\end_layout
+
+\begin_layout Standard
+On dipose de plusieurs types d'objets graphiques :
+\end_layout
+
+\begin_layout Description
+figure c'est le conteneur principal, qui va encapsuler les autres objets
+ graphiques
+\end_layout
+
+\begin_layout Description
+uicontrol composant de base pour la plupart des widgets : boutons, boîtes
+ à cocher, boutons radio, boîtes de texte, labels, sliders, listes...
+\end_layout
+
+\begin_layout Description
+axes objet graphique qui contient les graphes et / ou les images
+\end_layout
+
+\begin_layout Description
+uipanel permet d'encapsuler des widgets, et d'ajouter un peu de décorations
+\end_layout
+
+\begin_layout Description
+uibuttongroup utilitaire qui permet de grouper les boutons radios pour n'en
+ avoir qu'un seul de sélectionné
+\end_layout
+
+\begin_layout Description
+uitable permet d'afficher un tableau de données.
+ 
+\end_layout
+
+\begin_layout Standard
+On peut aussi trouver sur internet la manière d'afficher une arborescence
+ (composant 
+\series bold
+uitree
+\series default
+).
+\end_layout
+
+\begin_layout Standard
+Quelques attributs de composants :
+\end_layout
+
+\begin_layout Description
+TooltipString petite bulle d'aide qui s'affiche lorsque le curseur de la
+ souris passe par dessus le composant
+\end_layout
+
+\begin_layout Subsection
+Menus
+\end_layout
+
+\begin_layout Standard
+On peut aussi créer ses menus et barres d'outils.
+\end_layout
+
+\begin_layout Description
+uimenu pour générer la barre de menus d'une fenêtre
+\end_layout
+
+\begin_layout Description
+uicontextmenu il s'agit d'un menu 
+\begin_inset Quotes cld
+\end_inset
+
+flottant
+\begin_inset Quotes crd
+\end_inset
+
+, typiquement après un clic droit
+\end_layout
+
+\begin_layout Subsection
+Barre d'outils
+\end_layout
+
+\begin_layout Standard
+Les fenêtres ont par défaut une barre d'outils prédéfinie.
+ On peut la supprimer, ou définir la sienne.
+\end_layout
+
+\begin_layout Description
+uitoolbar permet de créer sa propre barre d'outils
+\end_layout
+
+\begin_layout Description
+uipushtool ajouter un bouton dans une barre d'outils
+\end_layout
+
+\begin_layout Description
+uitoggletool ajoute un bouton à deux états dans une barre d'outils
+\end_layout
+
+\begin_layout Subsection
+Boîtes de dialogue pré-définies
+\end_layout
+
+\begin_layout Standard
+On dispose d'un grand nombre de boîtes de dialogue prêtes à l'emploi :
+\end_layout
+
+\begin_layout Itemize
+message d'erreur, d'avertissement ou d'information
+\end_layout
+
+\begin_layout Itemize
+lire ou sauver un fichier
+\end_layout
+
+\begin_layout Itemize
+fenêtre affichant un menu
+\end_layout
+
+\begin_layout Section
+Évènements graphiques (callbacks)
+\end_layout
+
+\begin_layout Standard
+Les callback sont les portions de code qui seront exécutées lors de l'activation
+ de l'objet (appui sur le bouton, sélection du menu...).
+ Il s'agit le plus souvent d'un pointeur de fonction.
+\end_layout
+
+\begin_layout Subsection
+Callback dans un objet
+\end_layout
+
+\begin_layout Standard
+En utilisant la programmation orientée objet, on peut définir le callback
+ sur une méthode de l'objet.
+ C'est assez pratique, car cela permet de stocker les données dans la classe,
+ et d'éviter de jongler entre les UserData des différents objets graphiques.
+\end_layout
+
+\begin_layout Subsection
+Partager une fonction callback entre plusieurs objets
+\end_layout
+
+\begin_layout Standard
+On peut se trouver dans le cas où plusieurs objets graphiques ont des actions
+ très similaires.
+ Dans ce cas on peut vouloir partager la fonction 
+\begin_inset Quotes cld
+\end_inset
+
+callback
+\begin_inset Quotes crd
+\end_inset
+
+ entre les menus.
+ Pour différencier les menus, on peut spécifier des 'UserData' différents.
+ Exemple de déclaration de deux menus :
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+uimenu(menuTransform, ...
+\end_layout
+
+\begin_layout Plain Layout
+
+    'Label', 'Rotate Y Left', ...
+\end_layout
+
+\begin_layout Plain Layout
+
+    'UserData', [2 1], ...
+\end_layout
+
+\begin_layout Plain Layout
+
+    'Callback', @this.onRotateImage);
+\end_layout
+
+\begin_layout Plain Layout
+
+uimenu(menuTransform, ...
+\end_layout
+
+\begin_layout Plain Layout
+
+    'Label', 'Rotate Y Right', ...
+\end_layout
+
+\begin_layout Plain Layout
+
+    'UserData', [2 -1], ...
+\end_layout
+
+\begin_layout Plain Layout
+
+    'Callback', @this.onRotateImage);
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Dans le corps de la classe, on définti la fonction de callBack 
+\begin_inset Quotes cld
+\end_inset
+
+onRotateImage
+\begin_inset Quotes crd
+\end_inset
+
+ :
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+function onRotateImage(obj, hObject, eventdata)
+\end_layout
+
+\begin_layout Plain Layout
+
+    data = get(hObject, 'UserData');
+\end_layout
+
+\begin_layout Plain Layout
+
+    obj.rotateImage(data(1), data(2));
+\end_layout
+
+\begin_layout Plain Layout
+
+end
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Évènements fenêtre
+\end_layout
+
+\begin_layout Standard
+Quelques pointeurs de fonctions que l'on peut renseigner pour les objets
+ de type fenêtre :
+\end_layout
+
+\begin_layout Description
+CreateFcn appelé quand le fenêtre s'ouvre.
+ Vide par défaut.
+ Si on l'initialise après que la fenêtre est créée, cela n'a pas d'effet.
+\end_layout
+
+\begin_layout Description
+DeleteFcn appelé quand la fenêtre se ferme.
+ Vide par défaut.
+\end_layout
+
+\begin_layout Description
+CloseRequestFcn appelé quand on demande à fermer la fenêtre.
+ Par défaut, il s'agit d'une fonction 
+\begin_inset Quotes cld
+\end_inset
+
+closereq
+\begin_inset Quotes crd
+\end_inset
+
+.
+ Possibilité de surcharger, par exemple pour demander confirmation de la
+ fermeture, vérifier que le document est sauvé...
+\end_layout
+
+\begin_layout Description
+ResizeFcn appelé quand on redimensionne la fenêtre à la souris.
+ Vide par défaut.
+\end_layout
+
+\begin_layout Standard
+On trouve aussi des fonctions pour la gestion de la souris et du clavier.
+\end_layout
+
+\begin_layout Section
+Gestion de la souris
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+ajouter un tit exemple ?
+\end_layout
+
+\begin_layout Plain Layout
+-> affichage des positions quand on clique sur une image
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Quotes cld
+\end_inset
+
+ImageClickDemo
+\begin_inset Quotes crd
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Clic souris
+\end_layout
+
+\begin_layout Standard
+On intercepte les clics de la souris en renseignant l'attribut 
+\begin_inset Quotes cld
+\end_inset
+
+ButtonDownFcn
+\begin_inset Quotes crd
+\end_inset
+
+ de l'objet graphique considéré.
+ On applique pour cela le principe des pointeurs de fonction (function handle).
+ On utilise en général un objet de type axis ou image.
+\end_layout
+
+\begin_layout Description
+ButtonDownFcn (objet graphique) appelée quand le bouton est enfoncé
+\end_layout
+
+\begin_layout Standard
+Attention : quand on utilise ButtonDownFcn sur un objet de type axes, l'utilisat
+ion de fonctions telles que plot peut re-initialiser le callback.
+ Il vaut donc mieux spécifier cette propriété sur un objet autre que axes
+ (button, image...), qui lui ne sera pas affecté.
+\end_layout
+
+\begin_layout Standard
+Pour savoir si le clic s'est fait avec le bouton droit, ou si les touches
+ CTRL ou SHIFT ont été utilisées, il faut passer par la propriété 
+\begin_inset Quotes cld
+\end_inset
+
+SelectionType
+\begin_inset Quotes crd
+\end_inset
+
+ de la fenêtre courante.
+ Les valeurs de cette propriété sont :
+\end_layout
+
+\begin_layout Description
+Normal un clic gauche
+\end_layout
+
+\begin_layout Description
+Extend clic gauche avec la touche shift enfoncée
+\end_layout
+
+\begin_layout Description
+Alternate un clic gauche avec la touche control, ou un clic droit
+\end_layout
+
+\begin_layout Description
+Open les deux boutons en même temps
+\end_layout
+
+\begin_layout Standard
+Exemple de l'aide de Matlab :
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+fh_cb = @newfig; % Create function handle for newfig function
+\end_layout
+
+\begin_layout Plain Layout
+
+figure('ButtonDownFcn', fh_cb);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+function newfig(src,evnt)
+\end_layout
+
+\begin_layout Plain Layout
+
+   if strcmp(get(src,'SelectionType'),'alt')
+\end_layout
+
+\begin_layout Plain Layout
+
+      figure('ButtonDownFcn',fh_cb)
+\end_layout
+
+\begin_layout Plain Layout
+
+   else
+\end_layout
+
+\begin_layout Plain Layout
+
+      disp('Use control-click to create a new figure')
+\end_layout
+
+\begin_layout Plain Layout
+
+   end
+\end_layout
+
+\begin_layout Plain Layout
+
+end
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Déplacement souris
+\end_layout
+
+\begin_layout Standard
+Pour la gestion du mouvement, on passe par l'attribut 
+\begin_inset Quotes cld
+\end_inset
+
+WindowButtonMotionFcn
+\begin_inset Quotes crd
+\end_inset
+
+.
+ Par contre cet attribut n'est disponible que pour des objets de type 
+\begin_inset Quotes cld
+\end_inset
+
+figure
+\begin_inset Quotes crd
+\end_inset
+
+.
+ Du coup il faut stocker quelque part la référence de l'objet courant.
+ 
+\end_layout
+
+\begin_layout Standard
+La fin de trainée de la souris est interceptée par la fonction 
+\begin_inset Quotes cld
+\end_inset
+
+WindowButtonUpFcn
+\begin_inset Quotes crd
+\end_inset
+
+, attribut de l'objet figure.
+\end_layout
+
+\begin_layout Standard
+Attention : les fonction de type 
+\begin_inset Quotes cld
+\end_inset
+
+drawnow
+\begin_inset Quotes crd
+\end_inset
+
+ semblent causer un appel supplémentaire aux fonctions de type 
+\begin_inset Quotes cld
+\end_inset
+
+WindowButtonXXXFcn
+\begin_inset Quotes crd
+\end_inset
+
+.
+ Il faut donc en tenir compte lors de l'écriture du corps des fonctions.
+\end_layout
+
+\begin_layout Description
+WindowButtonDownFcn (figure) appelée quand le bouton est enfoncé
+\end_layout
+
+\begin_layout Description
+WindowButtonUpFcn (figure) appelée quand le bouton est relaché
+\end_layout
+
+\begin_layout Description
+WindowButtonMotionFcn (figure) appelé quand la souris est déplacée
+\end_layout
+
+\begin_layout Subsection
+Position du curseur
+\end_layout
+
+\begin_layout Standard
+La position du curseur est obtenue en récupérant la valeur de l'attribut
+ 
+\begin_inset Quotes cld
+\end_inset
+
+CurrentPoint
+\begin_inset Quotes crd
+\end_inset
+
+ de l'objet axes considéré.
+ Il s'agit d'un tableau de 2 lignes et 3 colonnes, qui correspond aux coordonnée
+s des deux points 3D du début et de la fin du fenêtrage de la droite d'intercept
+ion.
+ C'est pratique pour les graphes 3D.
+ Si le graphe est 2D, on n'utilise que les valeurs 
+\begin_inset Quotes cld
+\end_inset
+
+point(1,1:2)
+\begin_inset Quotes crd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Molette de la souris
+\end_layout
+
+\begin_layout Standard
+Il est possible de gérer les évènements associés à la molette de défilement
+ de la souris.
+ Il faut utiliser l'attribut 
+\begin_inset Quotes cld
+\end_inset
+
+WindowScrollWheelFcn
+\begin_inset Quotes crd
+\end_inset
+
+.
+ Là aussi, ce n'est disponible que pour les objets de type 
+\begin_inset Quotes cld
+\end_inset
+
+figure
+\begin_inset Quotes crd
+\end_inset
+
+.
+ Pour récupérer la direction du scroll (vers le haut ou vers le bas) on
+ utilise la propriété VerticalScrollCount de l'argument eventdata, qui vaut
+ -1 ou +1.
+\end_layout
+
+\begin_layout Standard
+Exemple :
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+function mouseWheelScrolled(hObject, eventData)
+\end_layout
+
+\begin_layout Plain Layout
+
+    if eventData.VerticalScrollCount == 1
+\end_layout
+
+\begin_layout Plain Layout
+
+        disp('Wheel up');
+\end_layout
+
+\begin_layout Plain Layout
+
+    else
+\end_layout
+
+\begin_layout Plain Layout
+
+        disp('Wheel down');
+\end_layout
+
+\begin_layout Plain Layout
+
+    end
+\end_layout
+
+\begin_layout Plain Layout
+
+end
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Et on ajoute le pointeur de fonction à la fenêtre courante par :
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+set(gcf, 'WindowScrollWheelFcn', @mouseWheelScrolled);
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Déplacement d'un slider
+\end_layout
+
+\begin_layout Standard
+Quand on ajoute un composant slider à une interface, on peut souhaiter avoir
+ une mise à jour de l'affichage quand on fait glisser le slider, et pas
+ uniquement quand on clique sur les boutons.
+ Il n'y a pas d'interface par défaut pour appeler cet évènement, mais on
+ trouve des contributions utilisateurs (Yair Altman) qui permettent de contourne
+r cet écueil.
+ De plus, la solution est dépendante de la version de Matlab.
+ 
+\end_layout
+
+\begin_layout Standard
+Exemple de solution :
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+% create a slider object
+\end_layout
+
+\begin_layout Plain Layout
+
+this.handles.zslider =
+\end_layout
+
+\begin_layout Plain Layout
+
+this.handles.zSlider = uicontrol('Style', 'slider', ...
+\end_layout
+
+\begin_layout Plain Layout
+
+    'Min', 1, 'Max', 100, 'Value', 50, ...
+\end_layout
+
+\begin_layout Plain Layout
+
+    'Callback', @this.onSliceSliderChanged); % function for intercepting
+ slider clicks
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+% code for dragging the slider thumb
+\end_layout
+
+\begin_layout Plain Layout
+
+% @see http://undocumentedmatlab.com/blog/continuous-slider-callback
+\end_layout
+
+\begin_layout Plain Layout
+
+if verLessThan('matlab', 'R2014b')
+\end_layout
+
+\begin_layout Plain Layout
+
+    hListener = handle.listener(this.handles.zSlider, ...
+\end_layout
+
+\begin_layout Plain Layout
+
+        'ActionEvent', @this.onSliceSliderChanged);
+\end_layout
+
+\begin_layout Plain Layout
+
+    setappdata(this.handles.zSlider, 'sliderListeners', hListener);
+\end_layout
+
+\begin_layout Plain Layout
+
+else
+\end_layout
+
+\begin_layout Plain Layout
+
+    addlistener(this.handles.zSlider, ...
+\end_layout
+
+\begin_layout Plain Layout
+
+        'ContinuousValueChange', @this.onSliceSliderChanged);
+\end_layout
+
+\begin_layout Plain Layout
+
+end
+\end_layout
+
+\end_inset
+
+On suppose que la classe contenant ce morceau de code déclare aussi la méthode
+ suivante :
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+function onSliceSliderChanged(obj, hObject, eventdata) %#ok<*INUSD>
+\end_layout
+
+\begin_layout Plain Layout
+
+    % determine slice index from slider position
+\end_layout
+
+\begin_layout Plain Layout
+
+    zslice = round(get(hObject, 'Value'));
+\end_layout
+
+\begin_layout Plain Layout
+
+    zslice = max(get(hObject, 'Min'), min(get(hObject, 'Max'), zslice));
+\end_layout
+
+\begin_layout Plain Layout
+
+    % can do other processing...
+\end_layout
+
+\begin_layout Plain Layout
+
+end
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
+\begin_inset CommandInset label
+LatexCommand label
+name "chap:Exceptions-et-erreurs"
+
+\end_inset
+
+Exceptions et gestion des erreurs
+\end_layout
+
+\begin_layout Standard
+Les mécanismes à base d'exceptions permettent une certaine souplesse dans
+ le traitement des erreurs pouvant survenir lors de l'exécution d'un programme.
+\end_layout
+
+\begin_layout Section
+Principe des exceptions
+\end_layout
+
+\begin_layout Standard
+Quand une erreur survient dans un programme, le comportement par défaut
+ est d'arrêter le fonctionnement du programme, et d'afficher l'erreur.
+ Exemple :
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+>> surf
+\end_layout
+
+\begin_layout Plain Layout
+
+??? Error using ==> surf at 50
+\end_layout
+
+\begin_layout Plain Layout
+
+Not enough input arguments.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Il est possible d'intercepter les erreurs, ce qui permet de L'idée est d'encapsu
+ler les traitements générants des erreurs dans des blocs 
+\begin_inset Quotes cld
+\end_inset
+
+try
+\begin_inset Quotes crd
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Quand une erreur survient lors de l'éxecution d'un programme ou d'une fonction,
+ une exception est levée.
+ Le traitement de la fonction s'interrompt, et l'erreur est prise en charge
+ par un bloc 
+\begin_inset Quotes cld
+\end_inset
+
+catch
+\begin_inset Quotes crd
+\end_inset
+
+.
+ Si aucun bloc catch n'est trouvé, un message d'erreur est affiché avec
+ la liste des fonctions appelées pour produire l'erreur.
+\end_layout
+
+\begin_layout Standard
+Exemple
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+try
+\end_layout
+
+\begin_layout Plain Layout
+
+    % bloc d'instructions pouvant poser des problèmes
+\end_layout
+
+\begin_layout Plain Layout
+
+    fid = fopen(filename, 'r'); 
+\end_layout
+
+\begin_layout Plain Layout
+
+    d_in = fread(fid);
+\end_layout
+
+\begin_layout Plain Layout
+
+catch ME
+\end_layout
+
+\begin_layout Plain Layout
+
+    % bloc d'interception de l'exception
+\end_layout
+
+\begin_layout Plain Layout
+
+    fprintf('Unable to access file %s
+\backslash
+n', filename);
+\end_layout
+
+\begin_layout Plain Layout
+
+    return;
+\end_layout
+
+\begin_layout Plain Layout
+
+end 
+\end_layout
+
+\begin_layout Plain Layout
+
+% on reprend le programme principal
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+L'objet ME est une instance d'un objet MException, qui contient quelques
+ informations pour faciliter le traitement et le debuggage.
+\end_layout
+
+\begin_layout Section
+Traiter une exception
+\end_layout
+
+\begin_layout Standard
+Les informations sur le problème sont encapsulées dans un objet de type
+ MException.
+ Cet objet contient les champs (publics) suivants :
+\end_layout
+
+\begin_layout Description
+identifier un identifiant d'erreur, de la forme 
+\begin_inset Quotes cld
+\end_inset
+
+matlab:lib:function
+\begin_inset Quotes crd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+message le message expliquant le type d'erreur
+\end_layout
+
+\begin_layout Description
+stack la liste des fonctions appelées avant que l'erreur ne se produise
+\end_layout
+
+\begin_layout Description
+cause une liste d'exceptions, ce qui permet éventuellement d'encapsuler
+ les traitements d'erreur
+\end_layout
+
+\begin_layout Section
+Créer ses erreurs
+\end_layout
+
+\begin_layout Standard
+C'est en fait assez simple, il suffit d'utiliser la fonction 
+\begin_inset Quotes cld
+\end_inset
+
+error
+\begin_inset Quotes crd
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Matlab préconise d'utiliser un système d'identification d'erreurs.
+ Cela permet en théorie de mieux aiguiller le traitement des erreurs.
+ Syntaxe du type : 
+\begin_inset Quotes cld
+\end_inset
+
+library:function:ErrorType
+\begin_inset Quotes crd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Chapter
+\begin_inset CommandInset label
+LatexCommand label
+name "chap:Gestion-des-évènements"
+
+\end_inset
+
+Gestion des évènements
+\end_layout
+
+\begin_layout Standard
+La gestion des évènements permet une grande souplesse dans la programmation.
+ L'idée est qu'à un certain moment de son déroulement, le programme puisse
+ envoyer un signal qui sera intercepté par des objets qui 
+\begin_inset Quotes cld
+\end_inset
+
+écoutent
+\begin_inset Quotes crd
+\end_inset
+
+ les évènements.
+ Les écouteurs vont traiter l'évènement, puis le programme principal reprendra
+ la main.
+\end_layout
+
+\begin_layout Standard
+On a ainsi trois catégories d'entités :
+\end_layout
+
+\begin_layout Itemize
+les objets qui envoient des évènements.
+ Typiquement, ce sont des instances de classes assez grosses, qui stockent
+ une liste d'instances d'écouteurs, et qui diffusent les évènements quand
+ il y a lieu
+\end_layout
+
+\begin_layout Itemize
+les évènement eux-mêmes.
+ En Java, ce sont des objets minimalistes, avec une référence à l'objet
+ appelant et éventuellement quelques données d'état.
+\end_layout
+
+\begin_layout Itemize
+les écouteurs (listeners), qui traitent les évènements.
+ Sous Java, ils implémentent des méthodes qui prennent en entrée un évènement,
+ et qui ne renvoient rien.
+\end_layout
+
+\begin_layout Standard
+Sous Matlab, la classe 
+\begin_inset Quotes cld
+\end_inset
+
+handle
+\begin_inset Quotes crd
+\end_inset
+
+ (classe de base pour les objets) propose nativement plusieurs méthodes
+ pour gérer les évènements.
+ Les points à retenir sont :
+\end_layout
+
+\begin_layout Itemize
+on définit les évènements avec le mot-clé 
+\begin_inset Quotes cld
+\end_inset
+
+events
+\begin_inset Quotes crd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+on ajoute les écouteurs avec la méthode 
+\begin_inset Quotes cld
+\end_inset
+
+addlistener
+\begin_inset Quotes crd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+on diffuse un évènement par la méthode 
+\begin_inset Quotes cld
+\end_inset
+
+notify
+\begin_inset Quotes crd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+les évènements sont soit une instance de 
+\begin_inset Quotes cld
+\end_inset
+
+event.EventData
+\begin_inset Quotes crd
+\end_inset
+
+, soit des sous-classes de la classe 
+\begin_inset Quotes cld
+\end_inset
+
+event.EventData
+\begin_inset Quotes crd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Ce chapitre présente la définition des évènement et des écouteurs, puis
+ le mécanisme de diffusion des évènements.
+ Enfin, une proposition de classe de type 
+\begin_inset Quotes cld
+\end_inset
+
+Ecouteur
+\begin_inset Quotes crd
+\end_inset
+
+ est présentée.
+\end_layout
+
+\begin_layout Section
+Définir un évènement
+\end_layout
+
+\begin_layout Standard
+On définit un évènement comme pour les propriétés de classe, par la directive
+ 
+\begin_inset Quotes cld
+\end_inset
+
+events
+\begin_inset Quotes crd
+\end_inset
+
+.
+ On doit juste donner l'identification de l'évènement.
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+events
+\end_layout
+
+\begin_layout Plain Layout
+
+    Overflow   % definition de l'evenement
+\end_layout
+
+\begin_layout Plain Layout
+
+end
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+C'est tout !
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage clearpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Diffuser un évènement
+\end_layout
+
+\begin_layout Standard
+On lance un appel aux fonctions écouteur de la façon suivante :
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+notify(obj, 'Overflow');
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Ou en spécifiant le type d'évènement :
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+notify(obj, 'Overflow', SpecialEventDataClass(value));
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Un exemple un peu plus fourni : on crée un nouvel objet avec un champ nommé
+ 
+\begin_inset Quotes cld
+\end_inset
+
+prop1
+\begin_inset Quotes crd
+\end_inset
+
+, et on envoie un évènement si on modifie ce champ avec une valeur numérique
+ supérieure à 10.
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+classdef DemoGestionEvent < handle
+\end_layout
+
+\begin_layout Plain Layout
+
+% Ne marche que pour des classes derivees de handle
+\end_layout
+
+\begin_layout Plain Layout
+
+properties
+\end_layout
+
+\begin_layout Plain Layout
+
+   Prop1 = 0;  % une propriete de classe
+\end_layout
+
+\begin_layout Plain Layout
+
+end
+\end_layout
+
+\begin_layout Plain Layout
+
+events
+\end_layout
+
+\begin_layout Plain Layout
+
+   Overflow   % identification de l'evenement
+\end_layout
+
+\begin_layout Plain Layout
+
+end
+\end_layout
+
+\begin_layout Plain Layout
+
+methods
+\end_layout
+
+\begin_layout Plain Layout
+
+   function set.Prop1(obj,value) % surcharge de la modification de la propriete
+\end_layout
+
+\begin_layout Plain Layout
+
+      orgvalue = obj.Prop1;
+\end_layout
+
+\begin_layout Plain Layout
+
+      obj.Prop1 = value;
+\end_layout
+
+\begin_layout Plain Layout
+
+         if (obj.Prop1 > 10)
+\end_layout
+
+\begin_layout Plain Layout
+
+            % On envoie un evenement personnalisé
+\end_layout
+
+\begin_layout Plain Layout
+
+            notify(obj, 'Overflow', SpecialEventDataClass(orgvalue));
+\end_layout
+
+\begin_layout Plain Layout
+
+         end
+\end_layout
+
+\begin_layout Plain Layout
+
+   end
+\end_layout
+
+\begin_layout Plain Layout
+
+end % fin des methodes
+\end_layout
+
+\begin_layout Plain Layout
+
+end % fin du classdef
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Définir un listener
+\end_layout
+
+\begin_layout Standard
+On a deux possibilités pour définir ses écouteurs : par pointeur de fonction
+ et par objet spécialisé.
+\end_layout
+
+\begin_layout Subsection
+Par pointeur de fonction
+\end_layout
+
+\begin_layout Standard
+L'idée est de fournir à la classe principale un pointeur vers une fonction
+ de traitement.
+ La fonction doit suivre le format suivant : le premier argument correspond
+ à l'objet qui envoie l'évènement, le deuxième argument correspond à l'objet
+ évènement proprement dit.
+\end_layout
+
+\begin_layout Standard
+Un exemple est donné dans le listing suivant :
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+function overflowHandler(eventSrc, eventData)
+\end_layout
+
+\begin_layout Plain Layout
+
+   disp('The value of prop1 is verflowing');
+\end_layout
+
+\begin_layout Plain Layout
+
+   disp(['Its value was: ' num2str(eventData.OrgValue)]);
+\end_layout
+
+\begin_layout Plain Layout
+
+   disp(['Its current value is: ' num2str(eventSrc.Prop1)])
+\end_layout
+
+\begin_layout Plain Layout
+
+end
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Pour associer l'évènement à la classe, on utilise la méthde 
+\begin_inset Quotes cld
+\end_inset
+
+addlistener
+\begin_inset Quotes crd
+\end_inset
+
+, à laquelle on précise le nom de l'évènement et le pointeur de fonction
+ qui gère l'évènement.
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+addlistener(obj, 'EventName', CallbackFunction);
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Dans l'exemple courant, cela correspond au code suivant :
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+dge = DemoGestionEvent; % objet à écouter
+\end_layout
+
+\begin_layout Plain Layout
+
+addlistener(dge, 'Overflow', @overflowHandler);
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Par classe spécialisée 
+\end_layout
+
+\begin_layout Standard
+Une alternative est de créer sa classe écouteur sur mesure.
+ Il faut définir une classe qui implémente une méthode d'interception d'évènemen
+ts de la manière suivante :
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+methods
+\end_layout
+
+\begin_layout Plain Layout
+
+   function listenMyEvent(obj, source, event)
+\end_layout
+
+\begin_layout Plain Layout
+
+      % obj    - instance de la classe ecouteur
+\end_layout
+
+\begin_layout Plain Layout
+
+      % source - objet qui génère l'evenement
+\end_layout
+
+\begin_layout Plain Layout
+
+      % event  - les donnees associees à l'evenement
+\end_layout
+
+\begin_layout Plain Layout
+
+      ...
+\end_layout
+
+\begin_layout Plain Layout
+
+   end
+\end_layout
+
+\begin_layout Plain Layout
+
+end
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+On peut ensuite ajouter l'écouteur (c'est à dire le pointeur de fonction
+ de l'objet) à l'objet qui envoie les évènements.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+hlistener = addlistener(eventSourceObj, 'Overflow', @obj.listenMyEvent)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Regrouper la gestion des évènements
+\end_layout
+
+\begin_layout Standard
+Le fait d'utiliser une classe pour intercepter les évènements a aussi l'avantage
+ que l'on peut définir des écouteurs pour plusieurs évènements, et les regrouper.
+\end_layout
+
+\begin_layout Standard
+Exemple pour la définition d'une classe abstraite pour gérer les évènements
+ d'une procédure d'optimization:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+classdef OptimizationListener
+\end_layout
+
+\begin_layout Plain Layout
+
+methods (Abstract)
+\end_layout
+
+\begin_layout Plain Layout
+
+    optimizationStarted(obj, source, event)
+\end_layout
+
+\begin_layout Plain Layout
+
+    optimizationIterated(obj, source, event)
+\end_layout
+
+\begin_layout Plain Layout
+
+    optimizationTerminated(obj, source, event)
+\end_layout
+
+\begin_layout Plain Layout
+
+end
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+On crée ensuite une ou plusieurs classes dérivées qui implémentent ces 3
+ méthodes.
+\end_layout
+
+\begin_layout Standard
+Pour un objet 
+\begin_inset Quotes cld
+\end_inset
+
+optimizable
+\begin_inset Quotes crd
+\end_inset
+
+, on ajoute 3 évènements, et une méthode addOptimizationListener :
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+classdef OptimizableClass < handle
+\end_layout
+
+\begin_layout Plain Layout
+
+...
+\end_layout
+
+\begin_layout Plain Layout
+
+events
+\end_layout
+
+\begin_layout Plain Layout
+
+    OptimizationStarted
+\end_layout
+
+\begin_layout Plain Layout
+
+    OptimizationIterated
+\end_layout
+
+\begin_layout Plain Layout
+
+    OptimizationTerminated
+\end_layout
+
+\begin_layout Plain Layout
+
+end
+\end_layout
+
+\begin_layout Plain Layout
+
+...
+\end_layout
+
+\begin_layout Plain Layout
+
+methods
+\end_layout
+
+\begin_layout Plain Layout
+
+    function addOptimizationListener(this, listener)
+\end_layout
+
+\begin_layout Plain Layout
+
+        addlistener(obj, 'OptimizationStarted', @listener.optimizationStarted);
+\end_layout
+
+\begin_layout Plain Layout
+
+        addlistener(obj, 'OptimizationIterated', @listener.optimizationIterated);
+\end_layout
+
+\begin_layout Plain Layout
+
+        addlistener(obj, 'OptimizationTerminated', @listener.optimizationTerminat
+ed);
+\end_layout
+
+\begin_layout Plain Layout
+
+    end
+\end_layout
+
+\begin_layout Plain Layout
+
+end
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Exemple d'utilisation dans un script :
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+optimizer = NelderMeadSimplexOptimizer();
+\end_layout
+
+\begin_layout Plain Layout
+
+listener = OptimizedValueDisplay(figure(1));
+\end_layout
+
+\begin_layout Plain Layout
+
+optimizer.addOptimizationListener(listener);
+\end_layout
+
+\begin_layout Plain Layout
+
+optimizer.start();
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Personnaliser un évènement
+\end_layout
+
+\begin_layout Standard
+Par défaut, un évènement est une instance de classe 
+\begin_inset Quotes cld
+\end_inset
+
+event.EventData
+\begin_inset Quotes crd
+\end_inset
+
+.
+ Si on veut un traitement plus fin, il est possible de créer une classe
+ d'évènement personnalisée :
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+classdef SpecialEventDataClass < event.EventData
+\end_layout
+
+\begin_layout Plain Layout
+
+   properties
+\end_layout
+
+\begin_layout Plain Layout
+
+      OrgValue = 0;
+\end_layout
+
+\begin_layout Plain Layout
+
+   end
+\end_layout
+
+\begin_layout Plain Layout
+
+   methods
+\end_layout
+
+\begin_layout Plain Layout
+
+      function eventData = SpecialEventDataClass(value)
+\end_layout
+
+\begin_layout Plain Layout
+
+            eventData.OrgValue = value;
+\end_layout
+
+\begin_layout Plain Layout
+
+      end
+\end_layout
+
+\begin_layout Plain Layout
+
+   end
+\end_layout
+
+\begin_layout Plain Layout
+
+end
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Comme on le voit ici, une classe d'évènement doit hériter de 
+\begin_inset Quotes cld
+\end_inset
+
+event.EventData
+\begin_inset Quotes crd
+\end_inset
+
+.
+\end_layout
+
+\end_body
+\end_document
