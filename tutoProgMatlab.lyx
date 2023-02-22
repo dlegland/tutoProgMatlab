@@ -2155,7 +2155,42 @@ Ce chapitre présente la gestion des objets introduite depuis la version
  à dire qui peuvent être modifiés et qui gardent trace de leur modification
  (contrairement aux objets pre-2008).
  On commence par présenter la déclaration des objets, puis des différents
- types de méthodes (les fonctions assoxiées aux objets).
+ types de méthodes (les fonctions associées aux objets).
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+TODO:
+\end_layout
+
+\begin_layout Plain Layout
+* étoffer le plan
+\end_layout
+
+\begin_layout Plain Layout
+* ajouter une intro plus générale sur l'utilisation des objets avant de
+ rentrer dans les détails techniques d'implémentation (
+\begin_inset Quotes cld
+\end_inset
+
+qu'est ce que la POO
+\begin_inset Quotes crd
+\end_inset
+
+ ?)
+\end_layout
+
+\begin_layout Plain Layout
+* voire une étape de nomenclature (classe, objet = instance de classe, propriété
+, méthode, les types de méthode...).
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -2479,13 +2514,31 @@ Déclaration du constructeur
 \end_layout
 
 \begin_layout Standard
-Il faut toujours prévoir un constructeur vide : dans le cas où on déclare
- un tableau d'objets, le constructeur vide est appelé automatiquement.
+Le constructeur est une méthode particulière qui est appelée lors de la
+ création d'une instance de la classe.
+ Elle peut également servir d'initialisation.
+ 
 \end_layout
 
 \begin_layout Standard
-De plus, il est préférable d'avoir systématiquement un constructeur de copie,
- qui équivaut à cloner les variables membres.
+Le code associé aux constructeurs de classe doit prendre en compte de nombreux
+ cas de figure :
+\end_layout
+
+\begin_layout Itemize
+Création d'un objet sans préciser d'argument (constructeur vide).
+ Dans le cas où on déclare un tableau d'objets, le constructeur est appelé
+ automatiquement, mais sans argument.
+ Il faut donc toujours prévoir un constructeur vide.
+\end_layout
+
+\begin_layout Itemize
+Initialisation à partir de valeurs spécifiées
+\end_layout
+
+\begin_layout Itemize
+Il est préférable d'avoir systématiquement un constructeur de copie, qui
+ équivaut à cloner les variables membres.
 \end_layout
 
 \begin_layout Standard
@@ -2689,14 +2742,14 @@ Pour des hiérarchies de classes plus complexes, il est aussi possible d'envisag
 r l'utilisation de constructeurs statiques (section 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "sec:Constructeurs-Statiques"
+reference "sec:Fabrique-Statique"
 
 \end_inset
 
 
 \begin_inset CommandInset ref
 LatexCommand vpageref
-reference "sec:Constructeurs-Statiques"
+reference "sec:Fabrique-Statique"
 
 \end_inset
 
@@ -2704,7 +2757,20 @@ reference "sec:Constructeurs-Statiques"
 \end_layout
 
 \begin_layout Section
-Création et utilisation des objets
+Cr
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+'e}
+\end_layout
+
+\end_inset
+
+ation et utilisation des objets
 \end_layout
 
 \begin_layout Standard
@@ -2812,6 +2878,91 @@ p2
 .
 \end_layout
 
+\begin_layout Subsection
+Créer des tableaux d'objets
+\end_layout
+
+\begin_layout Standard
+Pour créer des tableaux de type particulier, la solution préconisée est
+ de créer l'élément du tableau le plus extrême :
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+pts(dims(1), dims(2)) = Point3D([0 0 0]);
+\end_layout
+
+\begin_layout Plain Layout
+
+% Alternative (on doit avoir prod(dims)=np):
+\end_layout
+
+\begin_layout Plain Layout
+
+pts(np, 1) = Point3D([0 0 0]);
+\end_layout
+
+\begin_layout Plain Layout
+
+pts = reshape(pts, dims);
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Quand le tableau à créer a une dimension égale à zéro, une possibilité est
+ d'utiliser la méthode 
+\begin_inset Quotes cld
+\end_inset
+
+empty
+\begin_inset Quotes crd
+\end_inset
+
+ (présente pour toutes les classes).
+ Exemple :
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+pts = Point3D.empty(dims);
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Pour gérer les deux cas de manière souple, une solution est de créer une
+ fabrique statique qui teste si une des dimension est nulle, et choisit
+ le traitement en conséquence (section
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Fabrique-Statique"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
+\end_layout
+
 \begin_layout Section
 Méthodes privées
 \end_layout
@@ -2908,8 +3059,8 @@ Si on a déclaré la fonction dans un répertoire spécifique (
 \end_inset
 
 ), on peut écrire le code dans un fichier séparé.
- Il faut quand même déclarer la fonction le bloc de déclaration des méthodes
- de la classe, afin de pouvoir la rendre privée.
+ Il faut quand même déclarer la fonction dans le bloc de déclaration des
+ méthodes de la classe, afin de pouvoir la rendre privée.
 \end_layout
 
 \begin_layout Standard
@@ -3020,7 +3171,20 @@ private
 \end_layout
 
 \begin_layout Section
-Méthodes statiques
+M
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+'e}
+\end_layout
+
+\end_inset
+
+thodes statiques
 \end_layout
 
 \begin_layout Standard
@@ -5402,7 +5566,20 @@ sort renvoie une version triée de l'objet
 \end_layout
 
 \begin_layout Section
-Méthodes et classes abstraites
+M
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+'e}
+\end_layout
+
+\end_inset
+
+thodes et classes abstraites
 \end_layout
 
 \begin_layout Subsection
@@ -5816,13 +5993,13 @@ inst =
 \end_layout
 
 \begin_layout Section
-Constructeurs statiques ('static factory')
+Fabrique statique ('static factory')
 \end_layout
 
 \begin_layout Standard
 \begin_inset CommandInset label
 LatexCommand label
-name "sec:Constructeurs-Statiques"
+name "sec:Fabrique-Statique"
 
 \end_inset
 
@@ -5830,8 +6007,8 @@ name "sec:Constructeurs-Statiques"
 \end_layout
 
 \begin_layout Standard
-Les constructeurs statiques offrent une alternative intéressante à l'appel
- direct des constructeurs.
+Les fabriques statiques offrent une alternative intéressante à l'appel direct
+ des constructeurs.
  Ils consistent à déclarer dans la classe une ou plusieurs méthodes statiques
  qui retournent une instance de la classe.
  
@@ -6033,6 +6210,79 @@ interface
 n particulière de l'interface.
 \end_layout
 
+\begin_layout Subsection
+Création de tableaux
+\end_layout
+
+\begin_layout Standard
+L'utilisation d'une fabrique statique est notamment utile pour la création
+ de tableaux.
+ On peut tester si une dimension est égale à 0, et utiliser le traitement
+ le plus approprié.
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+% Declaration des methodes statiques
+\end_layout
+
+\begin_layout Plain Layout
+
+methods (Static)
+\end_layout
+
+\begin_layout Plain Layout
+
+    function pts = createArray(dims)
+\end_layout
+
+\begin_layout Plain Layout
+
+        if any(dims == 0)
+\end_layout
+
+\begin_layout Plain Layout
+
+            pts = Point2D.empty(dims);
+\end_layout
+
+\begin_layout Plain Layout
+
+        else
+\end_layout
+
+\begin_layout Plain Layout
+
+            pts(prod(dims), 1) = Point2D();
+\end_layout
+
+\begin_layout Plain Layout
+
+            pts = reshape(pts, dims);
+\end_layout
+
+\begin_layout Plain Layout
+
+        end
+\end_layout
+
+\begin_layout Plain Layout
+
+    end
+\end_layout
+
+\begin_layout Plain Layout
+
+end
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Chapter
 Bonnes pratiques en programmation orientée objet
 \end_layout
@@ -6122,7 +6372,7 @@ membres la première lettre en majuscule (ce qui semble préconisé par Matlab),
 \series bold
 obj
 \series default
-.nomDuChamp
+.NomDuChamp
 \begin_inset Quotes crd
 \end_inset
 
@@ -6353,7 +6603,7 @@ importables
 \begin_inset Quotes crd
 \end_inset
 
-, à la Java par exemple.
+, à la Java ou Python par exemple.
  Le nom du répertoire doit commencer par le caractère 
 \begin_inset Quotes cld
 \end_inset
