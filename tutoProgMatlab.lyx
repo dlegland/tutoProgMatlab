@@ -1075,7 +1075,7 @@ status open
 
 \begin_layout Plain Layout
 
-% Initialisation des données
+% Initialisation des donnees
 \end_layout
 
 \begin_layout Plain Layout
@@ -1429,7 +1429,7 @@ status open
 
 \begin_layout Plain Layout
 
-% e-mail: my.name@inra.fr
+% e-mail: my.name@inrae.fr
 \end_layout
 
 \begin_layout Plain Layout
@@ -1439,7 +1439,7 @@ status open
 
 \begin_layout Plain Layout
 
-% Copyright 2011 INRA - My Laboratory
+% Copyright 2011 INRAE - My Laboratory
 \end_layout
 
 \end_inset
@@ -2964,213 +2964,6 @@ noprefix "false"
 \end_layout
 
 \begin_layout Section
-Méthodes privées
-\end_layout
-
-\begin_layout Standard
-Les méthodes privées ne sont accessibles que depuis les méthodes de la classe.
- Elle permettent de partager du code entre les différentes méthodes, sans
- que ce code ne soit rendu public.
- Cela concerne typiquement du code d'initialisation, ou du code de vérification
- de l'intégrité des données de la classe.
-\end_layout
-
-\begin_layout Subsection
-Méthodes privées dans la déclaration de classe
-\end_layout
-
-\begin_layout Standard
-Si toutes les méthodes sont déclarées dans un même fichier, les fonctions
- privées doivent être déclarées dans un bloc séparé.
- On crée un bloc de déclarations de méthodes, pour lequel on spécifie l'accès
- privé 
-\begin_inset Quotes cld
-\end_inset
-
-private
-\begin_inset Quotes crd
-\end_inset
-
-, et on place le code des fonctions privées :
-\end_layout
-
-\begin_layout Standard
-\begin_inset listings
-inline false
-status open
-
-\begin_layout Plain Layout
-
-classdef ClassName
-\end_layout
-
-\begin_layout Plain Layout
-
-% dans le bloc des méthodes, on écrit le patron de la méthode
-\end_layout
-
-\begin_layout Plain Layout
-
-methods (Access = private)
-\end_layout
-
-\begin_layout Plain Layout
-
-    function res = maFonction(obj, arg1, arg2)
-\end_layout
-
-\begin_layout Plain Layout
-
-		% ...
- code de la fonction privée
-\end_layout
-
-\begin_layout Plain Layout
-
-    end
-\end_layout
-
-\begin_layout Plain Layout
-
-end
-\end_layout
-
-\begin_layout Plain Layout
-
-end
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Subsection
-Méthodes privées dans un fichier séparé
-\end_layout
-
-\begin_layout Standard
-Si on a déclaré la fonction dans un répertoire spécifique (
-\begin_inset Quotes cld
-\end_inset
-
-@-répertoire
-\begin_inset Quotes crd
-\end_inset
-
-), on peut écrire le code dans un fichier séparé.
- Il faut quand même déclarer la fonction dans le bloc de déclaration des
- méthodes de la classe, afin de pouvoir la rendre privée.
-\end_layout
-
-\begin_layout Standard
-\begin_inset listings
-inline false
-status open
-
-\begin_layout Plain Layout
-
-classdef ClassName
-\end_layout
-
-\begin_layout Plain Layout
-
-% dans le bloc des méthodes, on écrit le patron de la méthode
-\end_layout
-
-\begin_layout Plain Layout
-
-methods (Access = private)
-\end_layout
-
-\begin_layout Plain Layout
-
-    res = maFonction(obj, arg1, arg2)
-\end_layout
-
-\begin_layout Plain Layout
-
-end
-\end_layout
-
-\begin_layout Plain Layout
-
-end
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-On écrit ensuite le code de la méthode dans un fichier appelé 
-\begin_inset Quotes cld
-\end_inset
-
-maFonction.m
-\begin_inset Quotes crd
-\end_inset
-
-, qui se trouve dans le répertoire de la classe.
-\end_layout
-
-\begin_layout Standard
-\begin_inset listings
-inline false
-status open
-
-\begin_layout Plain Layout
-
-% fichier "maFonction.m"
-\end_layout
-
-\begin_layout Plain Layout
-
-function res = maFonction(obj, arg1, arg2)
-\end_layout
-
-\begin_layout Plain Layout
-
-   % ici, le code de la fonction privée
-\end_layout
-
-\begin_layout Plain Layout
-
-end
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Subsection
-Méthodes locales
-\end_layout
-
-\begin_layout Standard
-Quand on définit une classe dans un répertoire, on peut créer un répertoire
- 
-\begin_inset Quotes cld
-\end_inset
-
-private
-\begin_inset Quotes crd
-\end_inset
-
-.
- Les fonctions présentes dans ce répertoire sont utilisables depuis les
- méthodes de la classe, mais ne sont pas visible de l'extérieur.
- Elles se comportent comme des méthodes privées, à la différence que le
- premier argument ne doit pas être la référence de l'objet.
-\end_layout
-
-\begin_layout Standard
-
-\end_layout
-
-\begin_layout Section
 M
 \begin_inset ERT
 status open
@@ -3208,7 +3001,7 @@ Static
 
  (avec la majuscule).
  Pour utiliser une méthode statique, on utilise le nom de la classe, suivi
- du nom de la méthode 
+ du nom de la méthode :
 \end_layout
 
 \begin_layout Standard
@@ -3227,11 +3020,7 @@ res = NomDeClasse.nomDeMethode(...);
 \end_layout
 
 \begin_layout Subsection
-Exemple 1 : calcul de 
-\begin_inset Formula $\pi$
-\end_inset
-
- avec une précision arbitraire
+Exemple 1 : calcul de la valeur de PI avec une précision arbitraire
 \end_layout
 
 \begin_layout Standard
@@ -3500,7 +3289,331 @@ On ne peut pas avoir de champs de classe statiques.
  Cela peut être pénible pour certaines classes (typiquement une classe singleton
 ).
  On peut s'en sortir en utilisant des variables persistantes dans le corps
- d'une méthode statique.
+ d'une méthode statique, voir section
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Singleton"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Méthodes privées
+\end_layout
+
+\begin_layout Standard
+Les méthodes privées ne sont accessibles que depuis les méthodes de la classe.
+ Elle permettent de partager du code entre les différentes méthodes, sans
+ que ce code ne soit rendu public.
+ Cela concerne typiquement du code d'initialisation, ou du code de vérification
+ de l'intégrité des données de la classe.
+\end_layout
+
+\begin_layout Subsection
+Méthodes privées dans la déclaration de classe
+\end_layout
+
+\begin_layout Standard
+Si toutes les méthodes sont déclarées dans un même fichier, les fonctions
+ privées doivent être déclarées dans un bloc séparé.
+ On crée un bloc de déclarations de méthodes, pour lequel on spécifie l'accès
+ privé 
+\begin_inset Quotes cld
+\end_inset
+
+private
+\begin_inset Quotes crd
+\end_inset
+
+, et on place le code des fonctions privées :
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+classdef ClassName
+\end_layout
+
+\begin_layout Plain Layout
+
+% dans le bloc des méthodes, on écrit le patron de la méthode
+\end_layout
+
+\begin_layout Plain Layout
+
+methods (Access = private)
+\end_layout
+
+\begin_layout Plain Layout
+
+    function res = maFonction(obj, arg1, arg2)
+\end_layout
+
+\begin_layout Plain Layout
+
+		% ...
+ code de la fonction privée
+\end_layout
+
+\begin_layout Plain Layout
+
+    end
+\end_layout
+
+\begin_layout Plain Layout
+
+end
+\end_layout
+
+\begin_layout Plain Layout
+
+end
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Méthodes privées dans un fichier séparé
+\end_layout
+
+\begin_layout Standard
+Si on a déclaré la fonction dans un répertoire spécifique (
+\begin_inset Quotes cld
+\end_inset
+
+@-répertoire
+\begin_inset Quotes crd
+\end_inset
+
+), on peut écrire le code dans un fichier séparé.
+ Il faut quand même déclarer la fonction dans le bloc de déclaration des
+ méthodes de la classe, afin de pouvoir la rendre privée.
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+classdef ClassName
+\end_layout
+
+\begin_layout Plain Layout
+
+% dans le bloc des méthodes, on écrit le patron de la méthode
+\end_layout
+
+\begin_layout Plain Layout
+
+methods (Access = private)
+\end_layout
+
+\begin_layout Plain Layout
+
+    res = maFonction(obj, arg1, arg2)
+\end_layout
+
+\begin_layout Plain Layout
+
+end
+\end_layout
+
+\begin_layout Plain Layout
+
+end
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+On écrit ensuite le code de la méthode dans un fichier appelé 
+\begin_inset Quotes cld
+\end_inset
+
+maFonction.m
+\begin_inset Quotes crd
+\end_inset
+
+, qui se trouve dans le répertoire de la classe.
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+% fichier "maFonction.m"
+\end_layout
+
+\begin_layout Plain Layout
+
+function res = maFonction(obj, arg1, arg2)
+\end_layout
+
+\begin_layout Plain Layout
+
+   % ici, le code de la fonction privée
+\end_layout
+
+\begin_layout Plain Layout
+
+end
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\begin_layout Section
+Fonctions locales à une classe
+\end_layout
+
+\begin_layout Standard
+Il est possible de définir des fonctions (qui ne sont pas des méthodes)
+ dans le fichier de définition d'une classe.
+ La définition de telles fonctions se fait à l'extérieur du bloc 
+\begin_inset Quotes cld
+\end_inset
+
+classsdef
+\begin_inset Quotes crd
+\end_inset
+
+, et les arguments d'entrée ne doivent pas nécessairement comprendre de
+ référence à une instance de la classe.
+ On peut donc utiliser ces fonctions internes comme des fonctions statiques
+ privées.
+ Exemple :
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+classdef MyClass
+\end_layout
+
+\begin_layout Plain Layout
+
+   properties
+\end_layout
+
+\begin_layout Plain Layout
+
+      PropName
+\end_layout
+
+\begin_layout Plain Layout
+
+   end
+\end_layout
+
+\begin_layout Plain Layout
+
+   methods
+\end_layout
+
+\begin_layout Plain Layout
+
+      function obj = method1(val)
+\end_layout
+
+\begin_layout Plain Layout
+
+         adjustedVal = myUtilityFcn(val)
+\end_layout
+
+\begin_layout Plain Layout
+
+         ...
+\end_layout
+
+\begin_layout Plain Layout
+
+      end 
+\end_layout
+
+\begin_layout Plain Layout
+
+   end 
+\end_layout
+
+\begin_layout Plain Layout
+
+end % End of classdef
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+function out = myUtilityFcn(in)
+\end_layout
+
+\begin_layout Plain Layout
+
+   ...
+\end_layout
+
+\begin_layout Plain Layout
+
+end
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Quand on définit une classe dans un répertoire, on peut créer un répertoire
+ 
+\begin_inset Quotes cld
+\end_inset
+
+private
+\begin_inset Quotes crd
+\end_inset
+
+.
+ Les fonctions présentes dans ce répertoire sont utilisables depuis les
+ méthodes de la classe, mais ne sont pas visible de l'extérieur.
+ Cette solution peut être plus pratique dans le cas d'un très grand nombre
+ de fonctions locales.
+ 
 \end_layout
 
 \begin_layout Section
@@ -3625,7 +3738,7 @@ status open
 
 \begin_layout Plain Layout
 
-classdef ClasseFille < ClasseMere & ClassePere
+classdef ClasseFille < ClasseParente1 & ClasseParente2
 \end_layout
 
 \end_inset
@@ -3669,7 +3782,7 @@ methods
 
 \begin_layout Plain Layout
 
-        obj = obj@ClasseMere(varargin{:});
+        obj = obj@ClasseParente(varargin{:});
 \end_layout
 
 \begin_layout Plain Layout
@@ -3719,12 +3832,12 @@ methods
 
 \begin_layout Plain Layout
 
-        obj = obj@ClasseMere(); % sans argument
+        obj = obj@ClasseParente1(); % sans argument
 \end_layout
 
 \begin_layout Plain Layout
 
-        obj = obj@ClassePere(varargin{1}); % avec argument
+        obj = obj@ClasseParente2(varargin{1}); % avec argument
 \end_layout
 
 \begin_layout Plain Layout
@@ -3759,17 +3872,12 @@ status open
 
 \begin_layout Plain Layout
 
-obj = obj@lePackage.ClasseMere(varargin{:});
+obj = obj@lePackage.ClasseParente(varargin{:});
 \end_layout
 
 \end_inset
 
 
-\end_layout
-
-\begin_layout Standard
-Il faudrait vérifier si le constructeur vide de la classe parente est appelé
- par défaut ? A priori oui...
 \end_layout
 
 \begin_layout Subsection
@@ -3788,7 +3896,7 @@ status open
 
 \begin_layout Plain Layout
 
-classdef ClasseFille < ClasseMere
+classdef ClasseFille < ClasseParente
 \end_layout
 
 \begin_layout Plain Layout
@@ -3809,7 +3917,8 @@ methods
 
 \begin_layout Plain Layout
 
-        uneMethode@ClasseMere(obj); % Appelle la methode de la classe parente
+        uneMethode@ClasseParente(obj); % Appelle la methode de la classe
+ parente
 \end_layout
 
 \begin_layout Plain Layout
@@ -5828,6 +5937,16 @@ Singleton
 \end_layout
 
 \begin_layout Standard
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Singleton"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 Le singleton est un motif de conception qui permet de s'assurer qu'une classe
  donnée ne peut être instanciée qu'une seule fois.
  Par exemple, un gestionnaire d'application qui compte le nombre de fois
@@ -6361,8 +6480,17 @@ nomDeMethode
 \end_layout
 
 \begin_layout Description
-membres la première lettre en majuscule (ce qui semble préconisé par Matlab),
- ce qui permet d'éviter les conflits avec les noms de méthodes.
+propriétés la première lettre en majuscule (ce qui semble préconisé par
+ Matlab), ce qui permet d'éviter les conflits avec les noms de méthodes.
+ Exemple : 
+\begin_inset Quotes cld
+\end_inset
+
+UnePropriété
+\begin_inset Quotes crd
+\end_inset
+
+.
  Dans le corps des fonctions, je référence systématiquement les champs par
  
 \begin_inset Quotes cld
@@ -6384,18 +6512,9 @@ Gérer des tableaux d'objets
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-à voir si on garde cette partie ; elle me semble difficile à implémenter
- en pratique...
- Peut-être à garder pour expliquer les difficultés ?
-\end_layout
-
-\end_inset
-
-
+Matlab gère nativement la manipulation de tableaux d'objets, mais celle-ci
+ peut être délicate à mettre en oeuvre en pratique, notamment lorsque des
+ méthodes sont appelées sur des tableaux d'objets.
 \end_layout
 
 \begin_layout Subsection
@@ -6518,7 +6637,7 @@ function res = getNorm(obj)
 
 \begin_layout Plain Layout
 
-%GETNORM Renvoie la norme d'un vecteur
+%GETNORM Renvoie la norme d'un vecteur.
 \end_layout
 
 \begin_layout Plain Layout
@@ -6715,15 +6834,23 @@ Exemple 1
 \end_layout
 
 \begin_layout Standard
-Conidérons un package '+truc', qui contient :
+Conidérons un package '+pkg', qui contient :
 \end_layout
 
 \begin_layout Itemize
-un objet Truc
+un fichier MaClasse.m, qui définit une classe 
+\begin_inset Quotes cld
+\end_inset
+
+MaClasse
+\begin_inset Quotes crd
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Itemize
-une fonction create
+une fonction create.m
 \end_layout
 
 \begin_layout Standard
@@ -6737,7 +6864,7 @@ status open
 
 \begin_layout Plain Layout
 
-truc.create;
+pkg.create;
 \end_layout
 
 \end_inset
@@ -6746,7 +6873,7 @@ truc.create;
 \end_layout
 
 \begin_layout Standard
-et renvoie un objet de classe Truc.
+et renvoie un objet de type MaClasse.
 \end_layout
 
 \begin_layout Subsubsection
