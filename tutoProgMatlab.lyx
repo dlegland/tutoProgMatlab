@@ -195,7 +195,7 @@
 \papersides 2
 \paperpagestyle default
 \tablestyle default
-\listings_params "numbers=left,tabsize=2,frame=single,breaklines=true,aboveskip=5pt"
+\listings_params "language=Matlab,style={Matlab-editor},numbers=left,tabsize=2,frame=single,breaklines=true,basicstyle={\scriptsize\mlttfamily},aboveskip=5pt,showspaces=false"
 \tracking_changes false
 \output_changes false
 \change_bars false
@@ -5209,6 +5209,13 @@ La méthode accepte un seul argument :
  Elle renvoie un ensemble d'indices compris entre 0 et numel(obj)-1.
 \end_layout
 
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 Surcharge des opérations de tableau
 \end_layout
@@ -5513,6 +5520,13 @@ sort renvoie une version triée de l'objet
 \end_layout
 
 \begin_layout Standard
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
 
 \end_layout
 
