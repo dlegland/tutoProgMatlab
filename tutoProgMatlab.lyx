@@ -6,16 +6,16 @@
 \origin unavailable
 \textclass scrreprt
 \begin_preamble
-%\usepackage[utf8]{inputenc}
-%\usepackage{lmodern}
-%\usepackage[T1]{fontenc}
-\usepackage[T1]{fontenc}
-%\usepackage{lmodern}
-\usepackage[utf8]{inputenc}
-%\usepackage[utf8x]{inputenc}
-\usepackage{textcomp}  % quelques symboles speciaux
-\usepackage{xcolor}
+\usepackage{textcomp}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{hyperref}
 \definecolor{bl}{rgb}{0.0,0.2,0.6}
+\definecolor{mygreen}{rgb}{0,0.6,0}
+\definecolor{mygray}{rgb}{0.5,0.5,0.5}
+\definecolor{lightgray}{rgb}{0.95,0.95,0.95}
+\definecolor{mymauve}{rgb}{0.58,0,0.82}
+\hypersetup{colorlinks=true, citecolor=blue, linkcolor=blue}
+
 % package that modifies style of section headers
 \addtokomafont{part}{\color{bl}\scshape \selectfont}
 \addtokomafont{chapter}{\color{bl}\scshape \selectfont}
@@ -28,6 +28,7 @@
 \setkomafont{author}{\centering \small}
 \setkomafont{date}{\centering \small}
 \renewcommand{\contentsname}{Sommaire}
+
 % Change the abstract environment
 \usepackage[runin]{abstract}			% runin option for a run-in title
 \setlength\absleftindent{30pt}		% left margin
@@ -36,6 +37,7 @@
 \setlength{\abstitleskip}{-10pt}
 \renewcommand{\abstractname}{}
 \renewcommand{\abstracttextfont}{\color{bl} \small \slshape }	% slanted text
+
 % Custom headers and footers using KOMA-Script
 \usepackage{scrlayer-scrpage}
 \usepackage{lastpage}	% for page numbering
@@ -58,8 +60,10 @@
 \renewcommand{\chaptermark}[1]{\markboth{\thechapter\ #1}{}}
 % right section with number
 \renewcommand{\sectionmark}[1]{\markright{\thesection\ #1}}
+
 % Added by lyx2lyx
 \usepackage[charter]{mathdesign}
+
 %%%%% Packages
 \usepackage{algorithm}
 \floatname{algorithm}{Alg.}
@@ -73,7 +77,9 @@
 % resulting in an extra empty page at the end of the document.
 \usepackage[nohints]{minitoc}
 % enhance the typesetting of matlab code
-\usepackage{mcode}
+\usepackage{matlab-prettifier}
+
+
 %%%%% ALGORITHMES %%%%%
 \renewcommand{\algorithmicrequire}{\textbf{Requiert:}}
 \renewcommand{\algorithmicensure}{\textbf{Assure:}}
@@ -94,12 +100,12 @@
 \author{D. Legland}
 \date{\today}
 \end_preamble
-\options usenames,dvipsnames
+\options idxtotoc
 \use_default_options false
 \maintain_unincluded_children no
 \language french
 \language_package default
-\inputencoding utf8
+\inputencoding auto-legacy
 \fontencoding auto
 \font_roman "default" "default"
 \font_sans "default" "default"
@@ -219,11 +225,6 @@ today
 
 \end_layout
 
-\begin_layout Author
-D.
- Legland
-\end_layout
-
 \begin_layout Standard
 \begin_inset ERT
 status open
@@ -255,7 +256,7 @@ Introduction
 \begin_layout Standard
 Ce document rassemble différents éléments de pratique de programmation sous Matlab.
  Au fur et a mesure de la rédaction,
- il apparait qu'il pourrait servir de tutoriel sur la progammation Matlab,
+ il apparait qu'il pourrait servir de tutoriel sur la programmation Matlab,
  en particulier sur la programmation orientée objets (POO).
 \end_layout
 
