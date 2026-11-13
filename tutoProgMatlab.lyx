@@ -9,6 +9,7 @@
 \usepackage{textcomp}
 \usepackage[dvipsnames]{xcolor}
 \usepackage{hyperref}
+
 \definecolor{bl}{rgb}{0.0,0.2,0.6}
 \definecolor{mygreen}{rgb}{0,0.6,0}
 \definecolor{mygray}{rgb}{0.5,0.5,0.5}
@@ -70,12 +71,13 @@
 \usepackage{algorithmic}
 \usepackage{textcomp}
 \usepackage{listings}
-%\usepackage{color}
 \usepackage{hyperref}
+
 % To add mini-TOC in the beginning of each chapter
 % The 'nohints' option is to prevent a conflict with the lastpage package,
 % resulting in an extra empty page at the end of the document.
 \usepackage[nohints]{minitoc}
+
 % enhance the typesetting of matlab code
 \usepackage{matlab-prettifier}
 
@@ -96,6 +98,7 @@
 \renewcommand{\algorithmicendwhile}{\textbf{fin tant que}}
 \renewcommand{\algorithmicrepeat}{\textbf{r{\'{e}}p{\'{e}}ter}}
 \renewcommand{\algorithmicuntil}{\textbf{tant que}}
+
 % some info for populating document title page
 \author{D. Legland}
 \date{\today}
@@ -127,6 +130,7 @@
 \bibtex_command default
 \index_command default
 \float_placement h
+\float_alignment class
 \paperfontsize default
 \spacing single
 \use_hyperref true
@@ -256,7 +260,7 @@ Introduction
 \begin_layout Standard
 Ce document rassemble différents éléments de pratique de programmation sous Matlab.
  Au fur et a mesure de la rédaction,
- il apparait qu'il pourrait servir de tutoriel sur la programmation Matlab,
+ il est apparu qu'il pourrait servir de tutoriel sur la programmation Matlab,
  en particulier sur la programmation orientée objets (POO).
 \end_layout
 
@@ -415,7 +419,7 @@ Tests if-then-else
 
 \begin_layout Standard
 On découpe le programme en plusieurs blocs,
- et on execute un bloc ou l'autre en fonction d'une condition.
+ et on exécute un bloc ou l'autre en fonction d'une condition.
 \end_layout
 
 \begin_layout Standard
@@ -1647,7 +1651,7 @@ Matlab offre plusieurs mécanismes pour manipuler des objets.
 \begin_layout Standard
 Un premier chapitre présente les structures de données,
  ainsi que les objets par valeurs,
- qui corerspondent à l'ancienne version des objets.
+ qui correspondent à l'ancienne version des objets.
  Un deuxième chapitre présente la création et l'utilisation des objets par référence (
 \begin_inset Quotes cld
 \end_inset
@@ -2656,19 +2660,7 @@ nolink "false"
 \end_layout
 
 \begin_layout Section
-Cr
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-{
-\backslash
-'e}
-\end_layout
-
-\end_inset
-
-ation et utilisation des objets
+Création et utilisation des objets
 \end_layout
 
 \begin_layout Standard
@@ -2859,19 +2851,7 @@ nolink "false"
 \end_layout
 
 \begin_layout Section
-M
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-{
-\backslash
-'e}
-\end_layout
-
-\end_inset
-
-thodes statiques
+Méthodes statiques
 \end_layout
 
 \begin_layout Standard
@@ -5537,19 +5517,7 @@ sort renvoie une version triée de l'objet
 \end_layout
 
 \begin_layout Section
-M
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-{
-\backslash
-'e}
-\end_layout
-
-\end_inset
-
-thodes et classes abstraites
+Méthodes et classes abstraites
 \end_layout
 
 \begin_layout Subsection
@@ -6311,7 +6279,7 @@ Gérer des tableaux d'objets
 
 \begin_layout Standard
 Matlab gère nativement la manipulation de tableaux d'objets,
- mais celle-ci peut être délicate à mettre en oeuvre en pratique,
+ mais celle-ci peut être délicate à mettre en œuvre en pratique,
  notamment lorsque des méthodes sont appelées sur des tableaux d'objets.
 \end_layout
 
@@ -6618,7 +6586,7 @@ Exemple 1
 \end_layout
 
 \begin_layout Standard
-Conidérons un package '+pkg',
+Considérons un package '+pkg',
  qui contient :
 \end_layout
 
@@ -6675,7 +6643,7 @@ AbstractGraph
 \end_inset
 
 ,
- et de placer dans un répertoire utilitaire 'graph.impl' les classes correpsondant aux implémentations concrètes.
+ et de placer dans un répertoire utilitaire 'graph.impl' les classes correspondant aux implémentations concrètes.
  Exemple :
 \end_layout
 
@@ -7715,7 +7683,7 @@ Not enough input arguments.
 
 \begin_layout Standard
 Il est possible d'intercepter les erreurs,
- ce qui permet de L'idée est d'encapsuler les traitements générants des erreurs dans des blocs 
+ ce qui permet de L'idée est d'encapsuler les traitements générant des erreurs dans des blocs 
 \begin_inset Quotes cld
 \end_inset
 
@@ -7728,7 +7696,7 @@ try
 \end_layout
 
 \begin_layout Standard
-Quand une erreur survient lors de l'éxecution d'un programme ou d'une fonction,
+Quand une erreur survient lors de l'exécution d'un programme ou d'une fonction,
  une exception est levée.
  Le traitement de la fonction s'interrompt,
  et l'erreur est prise en charge par un bloc 
@@ -8050,7 +8018,7 @@ Ce chapitre présente la définition des évènement et des écouteurs,
 \begin_inset Quotes cld
 \end_inset
 
-Ecouteur
+Écouteur
 \begin_inset Quotes crd
 \end_inset
 
@@ -8451,7 +8419,7 @@ Le fait d'utiliser une classe pour intercepter les évènements a aussi l'avanta
 \end_layout
 
 \begin_layout Standard
-Exemple pour la définition d'une classe abstraite pour gérer les évènements d'une procédure d'optimization:
+Exemple pour la définition d'une classe abstraite pour gérer les évènements d'une procédure d'optimisation:
 \end_layout
 
 \begin_layout Standard
